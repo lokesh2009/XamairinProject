@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using CrossplatformApp.Pages;
 using CrossplatformWestBendApp;
 using NUnit.Framework;
 using Xamarin.UITest;
@@ -10,7 +11,7 @@ namespace CrossplatformWestBendApp
 {
 	[TestFixture(Platform.Android)]
 //	[TestFixture(Platform.iOS)]
-	public class SignInWithEmail
+	public class SignInWithEmail 
 	{
 		IApp app;
 		Platform platform;
@@ -117,5 +118,26 @@ namespace CrossplatformWestBendApp
                app.Tap(x=>x.Id("NoResourceEntry-118"));
         
             }
-	}
+	
+         /*
+             [Test]    
+                public void UsingPOM()
+            { 
+            
+             app.Repl();
+             CreateAccountPage createacc = new CreateAccountPage();
+             SignInEmail loginin = new SignInEmail();
+
+            //Create Account first
+            createacc.ClickonCreateAccountLink();
+            createacc.ClickNext("lokesh","sharma","lsharma@xtivia.com","8447520166");
+            createacc.CompleteCreateAccount("Gemini@12","Gemini@12");
+           
+          }
+         */
+
+            
+           
+        
+        }
 }

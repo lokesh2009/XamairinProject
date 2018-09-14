@@ -13,7 +13,9 @@ namespace CrossplatformWestBendApp
 				return ConfigureApp.Android.ApkFile("D:\\DUMMY\\EAXamarinAPP\\CrossplatformApp\\app-debug.apk").StartApp();
 			}
 
-			return ConfigureApp.iOS.StartApp();
+			return ConfigureApp
+                .iOS
+                .StartApp();
 		}
 	}
 }
