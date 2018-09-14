@@ -1,0 +1,13 @@
+D:\DUMMY\EAXamarinAPP\CrossplatformApp\bin\Debug\CrossplatformApp.dll
+D:\DUMMY\EAXamarinAPP\CrossplatformApp\bin\Debug\CrossplatformApp.pdb
+D:\DUMMY\EAXamarinAPP\CrossplatformApp\bin\Debug\nunit.framework.dll
+D:\DUMMY\EAXamarinAPP\CrossplatformApp\bin\Debug\NUnit.VisualStudio.TestAdapter.dll
+D:\DUMMY\EAXamarinAPP\CrossplatformApp\bin\Debug\nunit.core.dll
+D:\DUMMY\EAXamarinAPP\CrossplatformApp\bin\Debug\nunit.core.interfaces.dll
+D:\DUMMY\EAXamarinAPP\CrossplatformApp\bin\Debug\nunit.util.dll
+D:\DUMMY\EAXamarinAPP\CrossplatformApp\bin\Debug\Xamarin.UITest.dll
+D:\DUMMY\EAXamarinAPP\CrossplatformApp\obj\Debug\CrossplatformApp.csprojAssemblyReference.cache
+D:\DUMMY\EAXamarinAPP\CrossplatformApp\obj\Debug\CrossplatformApp.csproj.CoreCompileInputs.cache
+D:\DUMMY\EAXamarinAPP\CrossplatformApp\obj\Debug\CrossplatformApp.csproj.CopyComplete
+D:\DUMMY\EAXamarinAPP\CrossplatformApp\obj\Debug\CrossplatformApp.dll
+D:\DUMMY\EAXamarinAPP\CrossplatformApp\obj\Debug\CrossplatformApp.pdb
