@@ -33,12 +33,8 @@ D:\DUMMY\EAXamarinAPP\CrossplatformApp\bin\Debug\System.Security.Cryptography.En
 D:\DUMMY\EAXamarinAPP\CrossplatformApp\bin\Debug\System.Security.Cryptography.Primitives.dll
 D:\DUMMY\EAXamarinAPP\CrossplatformApp\bin\Debug\System.Security.Cryptography.X509Certificates.dll
 D:\DUMMY\EAXamarinAPP\CrossplatformApp\bin\Debug\Xamarin.UITest.dll
-D:\DUMMY\EAXamarinAPP\CrossplatformApp\obj\Debug\CrossplatformWestBendApp.csprojAssemblyReference.cache
 D:\DUMMY\EAXamarinAPP\CrossplatformApp\obj\Debug\CrossplatformWestBendApp.csproj.CoreCompileInputs.cache
 D:\DUMMY\EAXamarinAPP\CrossplatformApp\obj\Debug\CrossplatformWestBendApp.csproj.CopyComplete
 D:\DUMMY\EAXamarinAPP\CrossplatformApp\obj\Debug\CrossplatformApp.dll
 D:\DUMMY\EAXamarinAPP\CrossplatformApp\obj\Debug\CrossplatformApp.pdb
-D:\Automation_UI\Insured.App.UIAutomation\CrossplatformApp\obj\Debug\CrossplatformWestBendApp.csprojAssemblyReference.cache
-D:\Automation_UI\Insured.App.UIAutomation\CrossplatformApp\obj\Debug\CrossplatformWestBendApp.csproj.CoreCompileInputs.cache
-D:\Automation_UI\Insured.App.UIAutomation\CrossplatformApp\obj\Debug\CrossplatformApp.dll
-D:\Automation_UI\Insured.App.UIAutomation\CrossplatformApp\obj\Debug\CrossplatformApp.pdb
+D:\DUMMY\EAXamarinAPP\CrossplatformApp\obj\Debug\CrossplatformWestBendApp.csprojAssemblyReference.cache

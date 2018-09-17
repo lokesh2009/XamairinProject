@@ -5,8 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.UITest;
 
+/*
 namespace CrossplatformApp
+  
 {
+  
+
     public static class AppManager
     {
 
@@ -69,5 +73,7 @@ namespace CrossplatformApp
  
 
 
-    }
+
 }
+}
+*/

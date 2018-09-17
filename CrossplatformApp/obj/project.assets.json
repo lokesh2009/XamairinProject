@@ -5901,11 +5901,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Automation_UI\\Insured.App.UIAutomation\\CrossplatformApp\\CrossplatformWestBendApp.csproj",
+      "projectUniqueName": "D:\\DUMMY\\EAXamarinAPP\\CrossplatformApp\\CrossplatformWestBendApp.csproj",
       "projectName": "CrossplatformWestBendApp",
-      "projectPath": "D:\\Automation_UI\\Insured.App.UIAutomation\\CrossplatformApp\\CrossplatformWestBendApp.csproj",
+      "projectPath": "D:\\DUMMY\\EAXamarinAPP\\CrossplatformApp\\CrossplatformWestBendApp.csproj",
       "packagesPath": "C:\\Users\\lsharma\\.nuget\\packages\\",
-      "outputPath": "D:\\Automation_UI\\Insured.App.UIAutomation\\CrossplatformApp\\obj\\",
+      "outputPath": "D:\\DUMMY\\EAXamarinAPP\\CrossplatformApp\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [

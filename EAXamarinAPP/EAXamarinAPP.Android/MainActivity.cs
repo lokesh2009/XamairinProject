@@ -27,10 +27,7 @@ namespace EAXamarinAPP.Droid
 
             base.OnCreate(bundle);
 
-            AppCenter.Start("6ca30c04-62ae-4beb-9961-9fd80c534f1b",
-                   typeof(Analytics), typeof(Crashes));
-            AppCenter.Start("6ca30c04-62ae-4beb-9961-9fd80c534f1b", typeof(Analytics), typeof(Crashes));
-
+            
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
         }
