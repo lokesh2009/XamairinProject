@@ -7,10 +7,9 @@ using Xamarin.UITest;
 
 namespace CrossplatformApp
 {
-    class SettingPage
+    public class SettingPage
 
     {
-
         public static IApp Appcontext { get; set ;}
 
     }

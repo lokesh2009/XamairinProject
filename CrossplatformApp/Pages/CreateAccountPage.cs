@@ -7,7 +7,7 @@ using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Querie
 
 namespace CrossplatformApp.Pages
 {
-    class  CreateAccountPage : BasePage
+    class  CreateAccountPage 
     {
         /*
                app.Tap(x=>x.Text("Create Account"));
@@ -31,12 +31,12 @@ namespace CrossplatformApp.Pages
   
              */
      
-
-        public Query CreateAccount => x => x.Text("Create Account");
-        public Query FirstName => x => x.Id("NoResourceEntry-65");
-        public Query LastName => x => x.Id("NoResourceEntry-66");
-        public Query Emailid => x => x.Id("NoResourceEntry-67");
-        public Query PhoneNo => x => x.Id("NoResourceEntry-68");
+            //x=>x.Text("Create Account")
+        public Query CreateAccount = x => x.Text("Create Account");
+        public Query FirstName = x => x.Id("NoResourceEntry-65");
+        public Query LastName = x => x.Id("NoResourceEntry-66");
+        public Query Emailid = x => x.Id("NoResourceEntry-67");
+        public Query PhoneNo = x => x.Id("NoResourceEntry-68");
         public Query Next => x => x.Id("NoResourceEntry-70");
 
         // Create Account second page locaters
@@ -52,11 +52,12 @@ namespace CrossplatformApp.Pages
         
             internal void ClickonCreateAccountLink()
             { 
-            SettingPage.Appcontext.Tap(x => x.Text("Create Account"));
-            }
-  
-      //***********************************************************************************************
+            
+            SettingPage.Appcontext.Tap(CreateAccount);
+            //SettingPage.Appcontext.Tap(x=>x.Text("Sign in with email"));
 
+            }
+      //***********************************************************************************************
       //***************** Click_on_Next_Event_occurs_when_user_passed_values_as_parameter************
 
         
@@ -64,21 +65,21 @@ namespace CrossplatformApp.Pages
             { 
             
            // SettingPage.Appcontext.Tap(CreateAccount);
-            SettingPage.Appcontext.EnterText(FirstName,"FName");
+            SettingPage.Appcontext.EnterText(FirstName,FName);
             SettingPage.Appcontext.DismissKeyboard();
             SettingPage.Appcontext.Tap(LastName);
 
             //Provide Entry in Last name
-            SettingPage.Appcontext.EnterText(LastName, "Lname");
+            SettingPage.Appcontext.EnterText(LastName, Lname);
             SettingPage.Appcontext.DismissKeyboard();
             SettingPage.Appcontext.Tap(Emailid);
 
             //Provide Entry in Email
-            SettingPage.Appcontext.EnterText(Emailid,"Email");
+            SettingPage.Appcontext.EnterText(Emailid,Email);
             SettingPage.Appcontext.DismissKeyboard();
             SettingPage.Appcontext.Tap(PhoneNo);
 
-            SettingPage.Appcontext.EnterText(PhoneNo,"Phone");
+            SettingPage.Appcontext.EnterText(PhoneNo,Phone);
             SettingPage.Appcontext.DismissKeyboard();
             SettingPage.Appcontext.Tap(Next);
             SettingPage.Appcontext.Tap(Next);
@@ -89,19 +90,20 @@ namespace CrossplatformApp.Pages
         internal void CompleteCreateAccount(string password, string confirmpassword)
             { 
             
-            SettingPage.Appcontext.EnterText(Password,"password");
+            SettingPage.Appcontext.EnterText(Password,password);
             SettingPage.Appcontext.DismissKeyboard();
             SettingPage.Appcontext.Tap(ConfirmPassword);
-            SettingPage.Appcontext.EnterText(ConfirmPassword,"password");
+            SettingPage.Appcontext.EnterText(ConfirmPassword,password);
             SettingPage.Appcontext.DismissKeyboard();
+            SettingPage.Appcontext.Tap(IagreeCheckbox);
             SettingPage.Appcontext.Tap(IagreeCheckbox);
             SettingPage.Appcontext.Tap(CreateAccButton);
 
             }
 
-        //*********************************************************************************************
+ //*********************************************************************************************
 
-         //********************************************Wait for Element******************************** 
+ //********************************************Wait for Element******************************** 
 
         internal void WaitforElement()
             

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Linq;
+using CrossplatformApp;
 using CrossplatformApp.Pages;
 using CrossplatformWestBendApp;
 using NUnit.Framework;
@@ -11,9 +12,9 @@ namespace CrossplatformWestBendApp
 {
 	[TestFixture(Platform.Android)]
 //	[TestFixture(Platform.iOS)]
-	public class SignInWithEmail 
+	public class SignInWithEmail
 	{
-		IApp app;
+		private IApp app;
 		Platform platform;
 
 		public SignInWithEmail(Platform platform)
@@ -24,7 +25,9 @@ namespace CrossplatformWestBendApp
 		[SetUp]
 		public void BeforeEachTest()
 		{
-			app = AppInitializer.StartApp(platform);
+            SettingPage.Appcontext = AppInitializer.StartApp(platform);
+            app = SettingPage.Appcontext;
+
             //app = AppManager.StartApp();
 		}
 
@@ -48,7 +51,8 @@ namespace CrossplatformWestBendApp
 
             //app.Repl();
             
-
+             // Passing locater in to the app context 
+             // Locaters specifically for Android 
             app.Tap(x=>x.Text("Sign in with email"));
             app.EnterText(x=>x.Id("NoResourceEntry-62"),"testuser4@mailinator.com");
             app.DismissKeyboard();
@@ -78,7 +82,7 @@ namespace CrossplatformWestBendApp
         public void VerifyInvalidSignIn()
             { 
             
-           
+         
            app.Tap(x=>x.Text("Sign in with email"));
            app.EnterText(x=>x.Id("NoResourceEntry-62"),"lsharma@xtivia");
            app.Tap(x=>x.Id("NoResourceEntry-66"));
@@ -119,12 +123,12 @@ namespace CrossplatformWestBendApp
         
             }
 	
-         /*
+         
              [Test]    
                 public void UsingPOM()
             { 
             
-             app.Repl();
+         //    app.Repl();
              CreateAccountPage createacc = new CreateAccountPage();
              SignInEmail loginin = new SignInEmail();
 
@@ -134,7 +138,7 @@ namespace CrossplatformWestBendApp
             createacc.CompleteCreateAccount("Gemini@12","Gemini@12");
            
           }
-         */
+         
 
             
            

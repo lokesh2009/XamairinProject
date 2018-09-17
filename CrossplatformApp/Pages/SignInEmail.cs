@@ -7,7 +7,7 @@ using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Querie
 
 namespace CrossplatformApp.Pages
 {
-    class SignInEmail:BasePage
+    class SignInEmail
     {
       
         /*
