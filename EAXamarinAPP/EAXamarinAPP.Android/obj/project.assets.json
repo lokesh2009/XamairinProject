@@ -861,11 +861,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DUMMY\\EAXamarinAPP\\EAXamarinAPP\\EAXamarinAPP.Android\\WBI_WestbendInsurancePRJ.csproj",
+      "projectUniqueName": "D:\\Automation_UI\\Insured.App.UIAutomation\\EAXamarinAPP\\EAXamarinAPP.Android\\WBI_WestbendInsurancePRJ.csproj",
       "projectName": "WBI_WestbendInsurancePRJ",
-      "projectPath": "D:\\DUMMY\\EAXamarinAPP\\EAXamarinAPP\\EAXamarinAPP.Android\\WBI_WestbendInsurancePRJ.csproj",
+      "projectPath": "D:\\Automation_UI\\Insured.App.UIAutomation\\EAXamarinAPP\\EAXamarinAPP.Android\\WBI_WestbendInsurancePRJ.csproj",
       "packagesPath": "C:\\Users\\lsharma\\.nuget\\packages\\",
-      "outputPath": "D:\\DUMMY\\EAXamarinAPP\\EAXamarinAPP\\EAXamarinAPP.Android\\obj\\",
+      "outputPath": "D:\\Automation_UI\\Insured.App.UIAutomation\\EAXamarinAPP\\EAXamarinAPP.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [

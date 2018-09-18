@@ -896,11 +896,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DUMMY\\EAXamarinAPP\\EAXamarinAPP\\EAXamarinAPP.iOS\\WBI_WestbendInsurancePRJ.iOS.csproj",
+      "projectUniqueName": "D:\\Automation_UI\\Insured.App.UIAutomation\\EAXamarinAPP\\EAXamarinAPP.iOS\\WBI_WestbendInsurancePRJ.iOS.csproj",
       "projectName": "WBI_WestbendInsurancePRJ.iOS",
-      "projectPath": "D:\\DUMMY\\EAXamarinAPP\\EAXamarinAPP\\EAXamarinAPP.iOS\\WBI_WestbendInsurancePRJ.iOS.csproj",
+      "projectPath": "D:\\Automation_UI\\Insured.App.UIAutomation\\EAXamarinAPP\\EAXamarinAPP.iOS\\WBI_WestbendInsurancePRJ.iOS.csproj",
       "packagesPath": "C:\\Users\\lsharma\\.nuget\\packages\\",
-      "outputPath": "D:\\DUMMY\\EAXamarinAPP\\EAXamarinAPP\\EAXamarinAPP.iOS\\obj\\",
+      "outputPath": "D:\\Automation_UI\\Insured.App.UIAutomation\\EAXamarinAPP\\EAXamarinAPP.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [

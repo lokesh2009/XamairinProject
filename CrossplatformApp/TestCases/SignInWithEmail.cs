@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using CrossplatformApp;
+using CrossplatformApp.Base;
 using CrossplatformApp.Pages;
 using CrossplatformWestBendApp;
 using NUnit.Framework;
@@ -12,7 +13,7 @@ namespace CrossplatformWestBendApp
 {
 	[TestFixture(Platform.Android)]
 //	[TestFixture(Platform.iOS)]
-	public class SignInWithEmail
+	public class SignInWithEmail:Basepage
 	{
 		private IApp app;
 		Platform platform;
@@ -25,8 +26,8 @@ namespace CrossplatformWestBendApp
 		[SetUp]
 		public void BeforeEachTest()
 		{
-            SettingPage.Appcontext = AppInitializer.StartApp(platform);
-            app = SettingPage.Appcontext;
+            ApplicationContext = AppInitializer.StartApp(platform);
+            app = ApplicationContext;
 
             //app = AppManager.StartApp();
 		}
@@ -53,6 +54,8 @@ namespace CrossplatformWestBendApp
             
              // Passing locater in to the app context 
              // Locaters specifically for Android 
+
+            /*
             app.Tap(x=>x.Text("Sign in with email"));
             app.EnterText(x=>x.Id("NoResourceEntry-62"),"testuser4@mailinator.com");
             app.DismissKeyboard();
@@ -75,13 +78,14 @@ namespace CrossplatformWestBendApp
             app.Back();
             app.ScrollDown();
             
+            */
        
             }
 
         [Test]
         public void VerifyInvalidSignIn()
             { 
-            
+          /*  
          
            app.Tap(x=>x.Text("Sign in with email"));
            app.EnterText(x=>x.Id("NoResourceEntry-62"),"lsharma@xtivia");
@@ -92,7 +96,7 @@ namespace CrossplatformWestBendApp
            
            app.Tap(x=>x.Text("OK"));
 
-           
+           */
             }
 
         [Test]
@@ -101,7 +105,7 @@ namespace CrossplatformWestBendApp
           
         //****************************************************************************
        //*************** Create Account with Password verification************************
-            
+           /* 
                app.Tap(x=>x.Text("Create Account"));
                app.EnterText(x=>x.Id("NoResourceEntry-65"),"Lokesh");
                app.Tap(x=>x.Id("NoResourceEntry-66"));
@@ -120,27 +124,62 @@ namespace CrossplatformWestBendApp
                app.Tap(x=>x.Id("NoResourceEntry-107"));
                app.Tap(x=>x.Id("NoResourceEntry-107"));
                app.Tap(x=>x.Id("NoResourceEntry-118"));
-        
+        */
             }
 	
          
              [Test]    
-                public void UsingPOM()
+                public void CreateAccount_UsingPOM()
             { 
             
-         //    app.Repl();
-             CreateAccountPage createacc = new CreateAccountPage();
+            Currentpage = new CreateAccountPage();
+            Currentpage.As<CreateAccountPage>().ClickonCreateAccountLink();
+            Currentpage.As<CreateAccountPage>().ClickNext("lokesh","sharma","lsharma@xtivia.com","8447520166");
+            Currentpage.As<CreateAccountPage>().CompleteCreateAccount("Gemini@12","Gemini@12");
+           
+           
+            /*
+             * This is POM code where i am using without Pagefactory approch
+             * 
+             * 
+            
+            CreateAccountPage createacc = new CreateAccountPage();
              SignInEmail loginin = new SignInEmail();
 
             //Create Account first
             createacc.ClickonCreateAccountLink();
             createacc.ClickNext("lokesh","sharma","lsharma@xtivia.com","8447520166");
             createacc.CompleteCreateAccount("Gemini@12","Gemini@12");
-           
+           */
+
+
           }
          
+        [Test]
+        public void SignwithBlankUseridandPassword()
+            
+            { 
+        
+           Currentpage = new SignInEmail();
+           Currentpage.As<SignInEmail>().ClickonSignInLink();
+           Currentpage.As<SignInEmail>().SignInWithoutanyUsernameAndPassword();
+           //Assert.AreEqual("You have entered an invalid username or password", app.Query("You have entered an invalid username or password").First().Text);
+           Assert.AreEqual("You have entered an invalid username or password",ApplicationContext.Query(Currentpage.As<SignInEmail>().ErrorMessage_InvalidUsername_Password).First().Text);
+           Currentpage.As<SignInEmail>().ClickOn_Alert_OK();
+   
+            } 
+            
+
+        [Test]
+        public void SignInWithInvalidUserIdandPassword()
+            { 
+            
+            
+           Currentpage = new SignInEmail();
+           Currentpage.As<SignInEmail>().ClickonSignInLink();
 
             
+            }
            
         
         }

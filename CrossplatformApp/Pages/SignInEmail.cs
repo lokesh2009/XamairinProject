@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CrossplatformApp.Base;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +8,7 @@ using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Querie
 
 namespace CrossplatformApp.Pages
 {
-    class SignInEmail
+    class SignInEmail: Basepage
     {
       
         /*
@@ -44,6 +45,9 @@ namespace CrossplatformApp.Pages
         public Query EnterEmailid => x => x.Id("NoResourceEntry-62");
         public Query Enterpassword => x => x.Id("NoResourceEntry-66");
         public Query SignInButton => x => x.Text("SIGN IN");
+        public Query ErrorMessage_InvalidUsername_Password => x => x.Text("You have entered an invalid username or password");
+        public Query ClickOK_Alert => x=> x.Text("OK");
+
 
 
         //After Login Internal Pages 
@@ -56,18 +60,44 @@ namespace CrossplatformApp.Pages
         public Query ViewPolicy => x => x.Text("NoResourceEntry-243");
         public Query ViewIdcard => x => x.Id("NoResourceEntry-293");
 
-        
+        internal void ClickonSignInLink()
+            { 
+            
+            ApplicationContext.Tap(ClickonSignIn);
+            
+            }
+
+ 
         internal void SignIn(string Username, string pass)
             { 
             
-            SettingPage.Appcontext.Tap(ClickonSignIn);
-            SettingPage.Appcontext.EnterText(EnterEmailid,"testuser4@mailinator.com");
-            SettingPage.Appcontext.DismissKeyboard();
-            SettingPage.Appcontext.EnterText(Enterpassword,"Aa@1234");
-            SettingPage.Appcontext.DismissKeyboard();
-            SettingPage.Appcontext.Tap(SignInButton);
-            
+           
+            ApplicationContext.EnterText(EnterEmailid,Username);
+            ApplicationContext.DismissKeyboard();
+            ApplicationContext.EnterText(Enterpassword,pass);
+            ApplicationContext.DismissKeyboard();
+            ApplicationContext.Tap(SignInButton);
+            ApplicationContext.Tap(SignInButton);
+ 
             }
+
+        // Sign in Without passing any value
+
+        internal void SignInWithoutanyUsernameAndPassword()
+            { 
+            
+            ApplicationContext.Tap(SignInButton);
+            
+            ApplicationContext.WaitForElement(ErrorMessage_InvalidUsername_Password);
+       
+            }
+
+        internal void ClickOn_Alert_OK()
+            { 
+            ApplicationContext.Tap(ClickOK_Alert);
+
+            }
+        
 
     }
 }

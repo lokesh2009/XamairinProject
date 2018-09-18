@@ -8100,11 +8100,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DUMMY\\EAXamarinAPP\\EAXamarinAPP\\EAXamarinAPP.UWP\\WBI_WestbendInsurancePRJ.UWP.csproj",
+      "projectUniqueName": "D:\\Automation_UI\\Insured.App.UIAutomation\\EAXamarinAPP\\EAXamarinAPP.UWP\\WBI_WestbendInsurancePRJ.UWP.csproj",
       "projectName": "WBI_WestbendInsurancePRJ.UWP",
-      "projectPath": "D:\\DUMMY\\EAXamarinAPP\\EAXamarinAPP\\EAXamarinAPP.UWP\\WBI_WestbendInsurancePRJ.UWP.csproj",
+      "projectPath": "D:\\Automation_UI\\Insured.App.UIAutomation\\EAXamarinAPP\\EAXamarinAPP.UWP\\WBI_WestbendInsurancePRJ.UWP.csproj",
       "packagesPath": "C:\\Users\\lsharma\\.nuget\\packages\\",
-      "outputPath": "D:\\DUMMY\\EAXamarinAPP\\EAXamarinAPP\\EAXamarinAPP.UWP\\obj\\",
+      "outputPath": "D:\\Automation_UI\\Insured.App.UIAutomation\\EAXamarinAPP\\EAXamarinAPP.UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

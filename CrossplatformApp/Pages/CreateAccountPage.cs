@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CrossplatformApp.Base;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +8,7 @@ using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Querie
 
 namespace CrossplatformApp.Pages
 {
-    class  CreateAccountPage 
+    class  CreateAccountPage : Basepage 
     {
         /*
                app.Tap(x=>x.Text("Create Account"));
@@ -53,7 +54,7 @@ namespace CrossplatformApp.Pages
             internal void ClickonCreateAccountLink()
             { 
             
-            SettingPage.Appcontext.Tap(CreateAccount);
+            ApplicationContext.Tap(CreateAccount);
             //SettingPage.Appcontext.Tap(x=>x.Text("Sign in with email"));
 
             }
@@ -65,24 +66,24 @@ namespace CrossplatformApp.Pages
             { 
             
            // SettingPage.Appcontext.Tap(CreateAccount);
-            SettingPage.Appcontext.EnterText(FirstName,FName);
-            SettingPage.Appcontext.DismissKeyboard();
-            SettingPage.Appcontext.Tap(LastName);
+            ApplicationContext.EnterText(FirstName,FName);
+            ApplicationContext.DismissKeyboard();
+            ApplicationContext.Tap(LastName);
 
             //Provide Entry in Last name
-            SettingPage.Appcontext.EnterText(LastName, Lname);
-            SettingPage.Appcontext.DismissKeyboard();
-            SettingPage.Appcontext.Tap(Emailid);
+            ApplicationContext.EnterText(LastName, Lname);
+            ApplicationContext.DismissKeyboard();
+            ApplicationContext.Tap(Emailid);
 
             //Provide Entry in Email
-            SettingPage.Appcontext.EnterText(Emailid,Email);
-            SettingPage.Appcontext.DismissKeyboard();
-            SettingPage.Appcontext.Tap(PhoneNo);
+            ApplicationContext.EnterText(Emailid,Email);
+            ApplicationContext.DismissKeyboard();
+            ApplicationContext.Tap(PhoneNo);
 
-            SettingPage.Appcontext.EnterText(PhoneNo,Phone);
-            SettingPage.Appcontext.DismissKeyboard();
-            SettingPage.Appcontext.Tap(Next);
-            SettingPage.Appcontext.Tap(Next);
+            ApplicationContext.EnterText(PhoneNo,Phone);
+            ApplicationContext.DismissKeyboard();
+            ApplicationContext.Tap(Next);
+            ApplicationContext.Tap(Next);
 
             
             }
@@ -90,14 +91,14 @@ namespace CrossplatformApp.Pages
         internal void CompleteCreateAccount(string password, string confirmpassword)
             { 
             
-            SettingPage.Appcontext.EnterText(Password,password);
-            SettingPage.Appcontext.DismissKeyboard();
-            SettingPage.Appcontext.Tap(ConfirmPassword);
-            SettingPage.Appcontext.EnterText(ConfirmPassword,password);
-            SettingPage.Appcontext.DismissKeyboard();
-            SettingPage.Appcontext.Tap(IagreeCheckbox);
-            SettingPage.Appcontext.Tap(IagreeCheckbox);
-            SettingPage.Appcontext.Tap(CreateAccButton);
+            ApplicationContext.EnterText(Password,password);
+            ApplicationContext.DismissKeyboard();
+            ApplicationContext.Tap(ConfirmPassword);
+            ApplicationContext.EnterText(ConfirmPassword,password);
+            ApplicationContext.DismissKeyboard();
+            ApplicationContext.Tap(IagreeCheckbox);
+            ApplicationContext.Tap(IagreeCheckbox);
+            ApplicationContext.Tap(CreateAccButton);
 
             }
 
@@ -109,7 +110,7 @@ namespace CrossplatformApp.Pages
             
             {
          
-            SettingPage.Appcontext.WaitForElement(Password);
+            ApplicationContext.WaitForElement(Password);
 
             }
 
