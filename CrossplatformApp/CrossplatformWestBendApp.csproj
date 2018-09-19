@@ -48,6 +48,7 @@
     <Compile Include="AppManager.cs" />
     <Compile Include="Base\Basepage.cs" />
     <Compile Include="Base\BaseStep.cs" />
+    <Compile Include="Extension\WestBendExtensionMethods.cs" />
     <Compile Include="Pages\CreateAccountPage.cs" />
     <Compile Include="Pages\SignInEmail.cs" />
     <Compile Include="SettingPage.cs" />
@@ -56,7 +57,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Configuration\" />
-    <Folder Include="Extension\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
