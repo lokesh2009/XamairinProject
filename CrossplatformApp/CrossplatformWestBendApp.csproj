@@ -46,12 +46,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppManager.cs" />
+    <Compile Include="Base\Basepage.cs" />
+    <Compile Include="Base\BaseStep.cs" />
     <Compile Include="Pages\CreateAccountPage.cs" />
     <Compile Include="Pages\SignInEmail.cs" />
     <Compile Include="SettingPage.cs" />
     <Compile Include="TestCases\SignInWithEmail.cs" />
     <Compile Include="AppInitializer.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Configuration\" />
+    <Folder Include="Extension\" />
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

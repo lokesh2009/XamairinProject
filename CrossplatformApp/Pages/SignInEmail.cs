@@ -64,7 +64,10 @@ namespace CrossplatformApp.Pages
             { 
             
             ApplicationContext.Tap(ClickonSignIn);
+
             
+            
+
             }
 
  
