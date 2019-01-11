@@ -4249,7 +4249,7 @@
   },
   "libraries": {
     "Microsoft.AppCenter/1.9.0": {
-      "sha512": "jUCmustijWMUCKlY2kzMUuPqcoVxCSJBR2FpjUQsR7kUTdrPvoKgfPeSr/b6eF5g3nLRbl6GRW7StnnY7yMh+Q==",
+      "sha512": "FTegAq1AJANSUJD1ixKmxReD7ZrS/1HXMN0D910VDy0xvZ0WJt+ua/THJCUR56p7RzKZWWvgwp1QJCe3R1sJBA==",
       "type": "package",
       "path": "microsoft.appcenter/1.9.0",
       "files": [
@@ -4266,7 +4266,7 @@
       ]
     },
     "Microsoft.AppCenter.Analytics/1.9.0": {
-      "sha512": "bHXciKGX6WOZlxomjB/gfC+M191TFMN07mjzEUjBj1agNJ3wG8d8fOC7WZKBRbWN8APZ7OyNfZaKCPFGzyPcJw==",
+      "sha512": "/oQFw/dxxKyMsspEnrTnaXzJZC8uyLcZ4dz4r3Kis8QVNpLTTzKMCc5KHcgRnXbzQ19KdqFytAYPVtl452AcAg==",
       "type": "package",
       "path": "microsoft.appcenter.analytics/1.9.0",
       "files": [
@@ -4283,7 +4283,7 @@
       ]
     },
     "Microsoft.AppCenter.Crashes/1.9.0": {
-      "sha512": "TE1huyfrNaMOXjr+zAtX5hZ5TQVsWlCKyjIeNkLXT5TBRW54TpmEXEAOw6oOvqP61qDDT5RKUNeptSAd7qSQxQ==",
+      "sha512": "eeKRueLrSZxnpsk6Xx22souNonZ22TrZEuhynRNjS2E+1TOiu5lOikZGFXTfctrXeA/4nKieOvNlSDpJ0JEBVA==",
       "type": "package",
       "path": "microsoft.appcenter.crashes/1.9.0",
       "files": [
@@ -4310,10 +4310,11 @@
       ]
     },
     "Microsoft.Net.Native.Compiler/2.0.0": {
-      "sha512": "LOVoWPYT9iJu7/CKsWt6hm5b2FSCfuJAOD1CUEoa0OEL1xR3THY+NPtRL57jmV6gVZOIiuw7iro60r4MV6sODA==",
+      "sha512": "6hxJS5zpf3CGKnbrepAtfUu/FLjFSJor2LrSht7ozHIsGAJSfBDefJFL5CdlO+pO+isGP6Cl3aYzXOpxyphG4w==",
       "type": "package",
       "path": "microsoft.net.native.compiler/2.0.0",
       "files": [
+        ".signature.p7s",
         "build/Microsoft.Net.Native.Compiler.props",
         "build/Microsoft.Net.Native.Compiler.targets",
         "microsoft.net.native.compiler.2.0.0.nupkg.sha512",
@@ -5200,10 +5201,11 @@
       ]
     },
     "Microsoft.Net.Native.SharedLibrary-arm/2.0.0": {
-      "sha512": "9ghAlkZXl3GtgXlSEBQuP4ktYQnUDoSeQ/932iIHEA83vEIbBh+DPg6AHeMWaqZemeBrZ58P2oysVr7VOtrHOQ==",
+      "sha512": "Ggi72EHpPu8FiVE5oL0ZNSrC8qbFfVu9Dx1zs3H+kmMdRvO96FH08cKRh21nBZSXbu18TWPzeFFFuDZ2jv/KPQ==",
       "type": "package",
       "path": "microsoft.net.native.sharedlibrary-arm/2.0.0",
       "files": [
+        ".signature.p7s",
         "build/Microsoft.Net.Native.SharedLibrary-arm.props",
         "build/Microsoft.Net.Native.SharedLibrary-arm.targets",
         "microsoft.net.native.sharedlibrary-arm.2.0.0.nupkg.sha512",
@@ -5551,10 +5553,11 @@
       ]
     },
     "Microsoft.Net.Native.SharedLibrary-x64/2.0.0": {
-      "sha512": "Qlk13ElLq3RHO54j/4P2l0pr40Hfm3tkrYCoYZpdNWsGSt7EU8L+XZFuiDkmNw5RO7sRkq3dvZfVCg9mppBcAA==",
+      "sha512": "RH7WZcgUdoxVB9Y+uZqN+faQaw4/0JojakdTEQc1mvHCYTFzalaLr6fRkvMLt72LGG5HHR4uTbOihVoUD83bpA==",
       "type": "package",
       "path": "microsoft.net.native.sharedlibrary-x64/2.0.0",
       "files": [
+        ".signature.p7s",
         "build/Microsoft.Net.Native.SharedLibrary-x64.props",
         "build/Microsoft.Net.Native.SharedLibrary-x64.targets",
         "microsoft.net.native.sharedlibrary-x64.2.0.0.nupkg.sha512",
@@ -5902,10 +5905,11 @@
       ]
     },
     "Microsoft.Net.Native.SharedLibrary-x86/2.0.0": {
-      "sha512": "LExSkW6XHXyi4iIVhcGVN5sHmxXm8COAFGRhBAjhMdd75UD0Jbe9xtRpnTSfUdGmkQiLcydEW5uAw68Ye30RlQ==",
+      "sha512": "BRewn3Yqj/D9iZJTe94KNBPDKD2QYOsDLp7mJ/jf2Cu0Yk+WvHV3kdbytOQvxk9WLiYbv4GopYBHSi/au3AMgg==",
       "type": "package",
       "path": "microsoft.net.native.sharedlibrary-x86/2.0.0",
       "files": [
+        ".signature.p7s",
         "build/Microsoft.Net.Native.SharedLibrary-x86.props",
         "build/Microsoft.Net.Native.SharedLibrary-x86.targets",
         "microsoft.net.native.sharedlibrary-x86.2.0.0.nupkg.sha512",
@@ -6253,10 +6257,11 @@
       ]
     },
     "Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
-      "sha512": "4ud4s7laLdE3cirfDexEkKuUyZTkYZW/U9aBwt+M6spoEPdELCxepLBd4TSSUpCLXu6b8sRiZsNJZ75PdChFTg==",
+      "sha512": "572g29xEnN18tWVio5I/mgA6iiJ6kPc+vVp3fY01I4Gn3I610/EqxMrzETIql17BXymIv/lVO8m6gxdY65mb9w==",
       "type": "package",
       "path": "microsoft.net.uwpcoreruntimesdk/2.1.1",
       "files": [
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/Microsoft.Net.UWPCoreRuntimeSdk.props",
@@ -6284,10 +6289,11 @@
       ]
     },
     "Microsoft.NETCore.UniversalWindowsPlatform/6.0.1": {
-      "sha512": "2RI4q8FfR0S50V4YdZIZtzfyA2Bo4+jJHQXG+TDN7D4mPrFiIswIq8HVeDWS9xZsDwz23z7d/T2qi4rZa60Sig==",
+      "sha512": "fs9lPkvN5vjGB9Dxlhp/flVL419yu+wZGbBEKof0lW0LF8TTQgf/ynT8DTX4djj6ZfcqJ/tuwbF7BLXTG0LG/Q==",
       "type": "package",
       "path": "microsoft.netcore.universalwindowsplatform/6.0.1",
       "files": [
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "microsoft.netcore.universalwindowsplatform.6.0.1.nupkg.sha512",
@@ -6571,10 +6577,11 @@
       ]
     },
     "NETStandard.Library/2.0.1": {
-      "sha512": "oA6nwv9MhEKYvLpjZ0ggSpb1g4CQViDVQjLUcDWg598jtvJbpfeP2reqwI1GLW2TbxC/Ml7xL6BBR1HmKPXlTg==",
+      "sha512": "dYgVYk+xpF1HsQCQwfXb7JPt+lovQvTsvDUI5wKbxB2A31xbzNLj6u7bz9xyd/rE50OopkdzhCh4IzJzH1fkpw==",
       "type": "package",
       "path": "netstandard.library/2.0.1",
       "files": [
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/NETStandard.Library.targets",
@@ -6699,10 +6706,11 @@
       ]
     },
     "Newtonsoft.Json/6.0.1": {
-      "sha512": "tZ4TnfiXc3CUDZSZxXWcFOq5nDHxYY05qSDfZEJ654YOYzrPPOBgvSwJzr4jkTxeK5uoXmFG93Fq1lWDeLSmmA==",
+      "sha512": "G1o/1URPhFTVsWFiDg+Usg7zAkCxTOzDM0/bRTMGcc3GGg95wgknKOUsyw0HHp5d6FSuugSWLyBcAIvFTLlykw==",
       "type": "package",
       "path": "newtonsoft.json/6.0.1",
       "files": [
+        ".signature.p7s",
         "lib/net20/Newtonsoft.Json.dll",
         "lib/net20/Newtonsoft.Json.xml",
         "lib/net35/Newtonsoft.Json.dll",
@@ -6723,10 +6731,11 @@
       ]
     },
     "runtime.win10-arm-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.1": {
-      "sha512": "ZGShwJB9yNwHyM+w7g8int9gmurykzvy+SWv74+lCul0ddTmtI9WhXrAg3Dyub9urV7/lUtUjCjH+cSC5/5t7A==",
+      "sha512": "4MANGUef6RxOVzDcv210t4noC6vUgBbNsbD0QDopXFbdIJtNz8D7kEVGnDOBSRH25fnijk1TY7ZHOMsbUaAV4Q==",
       "type": "package",
       "path": "runtime.win10-arm-aot.microsoft.netcore.universalwindowsplatform/6.0.1",
       "files": [
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
@@ -6900,10 +6909,11 @@
       ]
     },
     "runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
-      "sha512": "Za4tG6DSTwIeYP++FsivMKROmXH7O3VN5aNAg5iVmACSmkEP9cF1nwVsPoGqrYmiVtWCuWbqwprBz3wpCplYew==",
+      "sha512": "3okRa0ksuf96BwvIQaz6jotIo2Fzq4f6lfPsHPbaMPDLyd8gt8iCZ5t0g3BE7AY/7QmSWCiG2aS00bY7OS5XSA==",
       "type": "package",
       "path": "runtime.win10-arm.microsoft.net.uwpcoreruntimesdk/2.1.1",
       "files": [
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/runtime.win10-arm.Microsoft.Net.UWPCoreRuntimeSdk.props",
@@ -6916,10 +6926,11 @@
       ]
     },
     "runtime.win10-arm.Microsoft.NETCore.UniversalWindowsPlatform/6.0.1": {
-      "sha512": "GaE6GmyEmK2NX2PMfBJGGzLQSUWYO18LDbbCVaNJecnaa0XdBLFOouBoI8X19CcJVww62ugzwM75JjfHw60Wnw==",
+      "sha512": "hvAcGzzGhaH22WU+tDAW/3mEMbRYcsIOfhZVfwMli8KAwUeJx4IVQYcFUlQfAXb9hMBhLTfIvBhm+yefmnrLfA==",
       "type": "package",
       "path": "runtime.win10-arm.microsoft.netcore.universalwindowsplatform/6.0.1",
       "files": [
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
@@ -7092,10 +7103,11 @@
       ]
     },
     "runtime.win10-x64-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.1": {
-      "sha512": "ouTXA9SGNNtKOorZBMYOCNVN8TxC4RlvaxzAU+ZRAxI00GMfoEBKjfd5FHJMtyi6+lng4yjpdUuz9h1ePgYV9Q==",
+      "sha512": "N7Rg2IFazK1QaWqjRvVTQFW6RTab4e9DyIdbV7GJuMe4+VNyy1bJsK0v7GlzSuPl0PQT8IK4RBxfyPSfvZYsKw==",
       "type": "package",
       "path": "runtime.win10-x64-aot.microsoft.netcore.universalwindowsplatform/6.0.1",
       "files": [
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
@@ -7269,10 +7281,11 @@
       ]
     },
     "runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
-      "sha512": "lT71dcRPLbSVHtUUBM4Kg5sUQ+zipDShjKnSeUYnlhSYYUuXYt2L76+obbinMXvr4eUvM6XwL93fI6E4HRzrOA==",
+      "sha512": "zgVZVW6IQoi90dIEg863O37m16Mf5weH7uho/IWAZ9a9oZmvFxx4VkUHUjK6ya3FA2IoBiR3EBWLBgf7aiAvtQ==",
       "type": "package",
       "path": "runtime.win10-x64.microsoft.net.uwpcoreruntimesdk/2.1.1",
       "files": [
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/runtime.win10-x64.Microsoft.Net.UWPCoreRuntimeSdk.props",
@@ -7285,10 +7298,11 @@
       ]
     },
     "runtime.win10-x64.Microsoft.NETCore.UniversalWindowsPlatform/6.0.1": {
-      "sha512": "iq7w9LmLzJla647TOEXrghCK14zw4ImIlnyZAO+h/XoRoq3l1OSng+hRBHzusgKwhvubdKHNlZWA9j4aj2fIng==",
+      "sha512": "LCnldcof+x7EZjQsBR0ZrNezz3Lzp6v2hIO0gu4o75fF903OKLlY8unJfGpcyzVdSEzaUbQK1aqaPfOk8GiU4A==",
       "type": "package",
       "path": "runtime.win10-x64.microsoft.netcore.universalwindowsplatform/6.0.1",
       "files": [
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
@@ -7461,10 +7475,11 @@
       ]
     },
     "runtime.win10-x86-aot.Microsoft.NETCore.UniversalWindowsPlatform/6.0.1": {
-      "sha512": "p4GOowv8/INpx65r/TU0OUNoBC3Qk3kbRKPAkqQ05Tf/rTg8NOLR+qxvNRlH49rsUvGb14RarUqscgwcekBOXA==",
+      "sha512": "DRzAxwsTrANKayypG4vMtt8Jmz0mVHdy/FD/0d2ZmIjBjM4GsKbAeAbGwIITvr90aPABmXIJNarJWpwhWvJxXg==",
       "type": "package",
       "path": "runtime.win10-x86-aot.microsoft.netcore.universalwindowsplatform/6.0.1",
       "files": [
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
@@ -7638,10 +7653,11 @@
       ]
     },
     "runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk/2.1.1": {
-      "sha512": "PmMz7gOHssh8MKY3jqtCAXNWHXWQQLhXUGjP/ZL8TCdB5Ba1JJHLaCzCS1pmndT84rsyDCF+Fai/nl9rn4AZSw==",
+      "sha512": "RFGsgwPuadexPnfUqrj5TcebqNlt9FmPcmbCAlmfgRN7T8pQh1OMOYNxzICEtcIOv29w5xwvcIN5k470U7VrWQ==",
       "type": "package",
       "path": "runtime.win10-x86.microsoft.net.uwpcoreruntimesdk/2.1.1",
       "files": [
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "build/runtime.win10-x86.Microsoft.Net.UWPCoreRuntimeSdk.props",
@@ -7654,10 +7670,11 @@
       ]
     },
     "runtime.win10-x86.Microsoft.NETCore.UniversalWindowsPlatform/6.0.1": {
-      "sha512": "nT3j6rR+hZwec3IGcFE8Vsq0bURezJzpCVg9UwQ9dzDXOrZrOfJm0RzWSuC5imRphSCFzz57I73TplpXyC1PUA==",
+      "sha512": "avP4HJOkH7/2UhKrleq6VX8948bF0ZyueOIOacCm5s7egONJEJuYE2RjSD0LD3jXdtOfL3EawYql+vIqVuGoTw==",
       "type": "package",
       "path": "runtime.win10-x86.microsoft.netcore.universalwindowsplatform/6.0.1",
       "files": [
+        ".signature.p7s",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
         "ref/netstandard/_._",
@@ -7830,10 +7847,11 @@
       ]
     },
     "sqlite-net-pcl/1.3.1": {
-      "sha512": "YVqyIbWN4J1f7kYIJt3sHtnXw51MifWAsVSiMxDpexfzJuBR2QUmiqxxMlaV5IpFl9Nwgm9QICaNNSyNiEmGvA==",
+      "sha512": "LRXIRlrcM/DjMJdZ0dUmunafHO861pU0dBzZjEkNNBKa1n/JQUkD78kcJ920D+HQufms1IOs/Kbna5kcRZPMzg==",
       "type": "package",
       "path": "sqlite-net-pcl/1.3.1",
       "files": [
+        ".signature.p7s",
         "lib/netstandard1.1/SQLite-net.dll",
         "lib/netstandard1.1/SQLite-net.dll.mdb",
         "lib/netstandard1.1/SQLite-net.xml",
@@ -7845,10 +7863,11 @@
       ]
     },
     "SQLitePCLRaw.bundle_green/1.1.2": {
-      "sha512": "i7ZcVmz1CY9/Un9GrnZWtbou9va7ho54Bx9V7H59CxERCq9IJ10164rY8sg2uLGtiJY3AhWdtrA045QTlETmhA==",
+      "sha512": "5I3e6RKI4rtKEmGYbAEic7P9WaToYGS20acObyVfss+Mn8EWLIXEDk7EyBKl4OloL0J1uAVYEBDGBaJ7g7zEnQ==",
       "type": "package",
       "path": "sqlitepclraw.bundle_green/1.1.2",
       "files": [
+        ".signature.p7s",
         "build/wp8/SQLitePCLRaw.bundle_green.targets",
         "build/wp80/arm/SQLitePCLRaw.batteries_green.dll",
         "build/wp80/arm/SQLitePCLRaw.batteries_v2.dll",
@@ -7890,10 +7909,11 @@
       ]
     },
     "SQLitePCLRaw.core/1.1.2": {
-      "sha512": "Hll9I6i6c9h+8gW250qGssQh/4l7AQEhSzK0TXSVju5utgXV6ruupaiGr/3MFdwGIDH8QyVxXz22/esZ8A6CMw==",
+      "sha512": "1E9T9SAFGy6rtV8DVVCg3PMdAtqTa+UlCwjCiJaQ2qZq6ykv05FmhbD8n9DQo44zvqw0w3JmM9YdTv/rj5GBCg==",
       "type": "package",
       "path": "sqlitepclraw.core/1.1.2",
       "files": [
+        ".signature.p7s",
         "lib/MonoAndroid/SQLitePCLRaw.core.dll",
         "lib/Xamarin.Mac20/SQLitePCLRaw.core.dll",
         "lib/Xamarin.iOS10/SQLitePCLRaw.core.dll",
@@ -7914,10 +7934,11 @@
       ]
     },
     "SQLitePCLRaw.lib.e_sqlite3.v140/1.1.2": {
-      "sha512": "GTgZvXEE3hY0YVJNskdz6oUwN1k1kcaItobjPrUO2DVnRHolOMPuoR6F43VCeR3S7zioSOI5sqaSqwX6kkL0mQ==",
+      "sha512": "8RDAdnWdk9xrv1nivLB2ynYt700Pxk7yCnhC3t4tUWAiyKhj/lLmaF79VyBEM8OMKqZvBCPC5apCQ4P06/ZRPg==",
       "type": "package",
       "path": "sqlitepclraw.lib.e_sqlite3.v140/1.1.2",
       "files": [
+        ".signature.p7s",
         "build/SQLitePCLRaw.lib.e_sqlite3.v140.targets",
         "runtimes/win10-arm/native/e_sqlite3.dll",
         "runtimes/win10-x64/native/e_sqlite3.dll",
@@ -7927,17 +7948,18 @@
       ]
     },
     "SQLitePCLRaw.provider.e_sqlite3.uwp10/1.1.2": {
-      "sha512": "OGlBhALVrK1CQjUpzisIkSy243a/zCWyfV//b31/OYEK6Z3IjTp6yUuGfifMUzAI8EbiLAI4fPUa2YYthaIU1A==",
+      "sha512": "MQoERM7+u2dezg5h6qNlUh3nTEwnfIe9vVHQjNSLmHRudez83lWwtCdLHPV/9XI0ES7N+e+KBcTZbgnZiLPXCg==",
       "type": "package",
       "path": "sqlitepclraw.provider.e_sqlite3.uwp10/1.1.2",
       "files": [
+        ".signature.p7s",
         "lib/uap10.0/SQLitePCLRaw.provider.e_sqlite3.dll",
         "sqlitepclraw.provider.e_sqlite3.uwp10.1.1.2.nupkg.sha512",
         "sqlitepclraw.provider.e_sqlite3.uwp10.nuspec"
       ]
     },
     "Xamarin.Forms/3.0.0.561731": {
-      "sha512": "ZnpuSybty6uZsgInJQD2QoYsjsdzPmu25EltSNJTnwgiQCW0MVZfwU6//jbt4Sf0ZfAiryi8MZFhU1I0NAP6Ew==",
+      "sha512": "uKorNXBfCWZLMzGgGTGGqL0Xnf/svKTICeAvFCUBWoESC0QV1J1mthtHcayiGZM8WzBKHDJpJarVAR7INdnheg==",
       "type": "package",
       "path": "xamarin.forms/3.0.0.561731",
       "files": [
@@ -8100,11 +8122,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Automation_UI\\Insured.App.UIAutomation\\EAXamarinAPP\\EAXamarinAPP.UWP\\WBI_WestbendInsurancePRJ.UWP.csproj",
+      "projectUniqueName": "D:\\DUMMY\\UI_Automation\\Insured.App.UIAutomation\\EAXamarinAPP\\EAXamarinAPP.UWP\\WBI_WestbendInsurancePRJ.UWP.csproj",
       "projectName": "WBI_WestbendInsurancePRJ.UWP",
-      "projectPath": "D:\\Automation_UI\\Insured.App.UIAutomation\\EAXamarinAPP\\EAXamarinAPP.UWP\\WBI_WestbendInsurancePRJ.UWP.csproj",
+      "projectPath": "D:\\DUMMY\\UI_Automation\\Insured.App.UIAutomation\\EAXamarinAPP\\EAXamarinAPP.UWP\\WBI_WestbendInsurancePRJ.UWP.csproj",
       "packagesPath": "C:\\Users\\lsharma\\.nuget\\packages\\",
-      "outputPath": "D:\\Automation_UI\\Insured.App.UIAutomation\\EAXamarinAPP\\EAXamarinAPP.UWP\\obj\\",
+      "outputPath": "D:\\DUMMY\\UI_Automation\\Insured.App.UIAutomation\\EAXamarinAPP\\EAXamarinAPP.UWP\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

@@ -674,7 +674,7 @@
   },
   "libraries": {
     "Microsoft.AppCenter/1.9.0": {
-      "sha512": "jUCmustijWMUCKlY2kzMUuPqcoVxCSJBR2FpjUQsR7kUTdrPvoKgfPeSr/b6eF5g3nLRbl6GRW7StnnY7yMh+Q==",
+      "sha512": "FTegAq1AJANSUJD1ixKmxReD7ZrS/1HXMN0D910VDy0xvZ0WJt+ua/THJCUR56p7RzKZWWvgwp1QJCe3R1sJBA==",
       "type": "package",
       "path": "microsoft.appcenter/1.9.0",
       "files": [
@@ -691,7 +691,7 @@
       ]
     },
     "Microsoft.AppCenter.Analytics/1.9.0": {
-      "sha512": "bHXciKGX6WOZlxomjB/gfC+M191TFMN07mjzEUjBj1agNJ3wG8d8fOC7WZKBRbWN8APZ7OyNfZaKCPFGzyPcJw==",
+      "sha512": "/oQFw/dxxKyMsspEnrTnaXzJZC8uyLcZ4dz4r3Kis8QVNpLTTzKMCc5KHcgRnXbzQ19KdqFytAYPVtl452AcAg==",
       "type": "package",
       "path": "microsoft.appcenter.analytics/1.9.0",
       "files": [
@@ -708,7 +708,7 @@
       ]
     },
     "Microsoft.AppCenter.Crashes/1.9.0": {
-      "sha512": "TE1huyfrNaMOXjr+zAtX5hZ5TQVsWlCKyjIeNkLXT5TBRW54TpmEXEAOw6oOvqP61qDDT5RKUNeptSAd7qSQxQ==",
+      "sha512": "eeKRueLrSZxnpsk6Xx22souNonZ22TrZEuhynRNjS2E+1TOiu5lOikZGFXTfctrXeA/4nKieOvNlSDpJ0JEBVA==",
       "type": "package",
       "path": "microsoft.appcenter.crashes/1.9.0",
       "files": [
@@ -735,7 +735,7 @@
       ]
     },
     "Xamarin.Forms/3.0.0.561731": {
-      "sha512": "ZnpuSybty6uZsgInJQD2QoYsjsdzPmu25EltSNJTnwgiQCW0MVZfwU6//jbt4Sf0ZfAiryi8MZFhU1I0NAP6Ew==",
+      "sha512": "uKorNXBfCWZLMzGgGTGGqL0Xnf/svKTICeAvFCUBWoESC0QV1J1mthtHcayiGZM8WzBKHDJpJarVAR7INdnheg==",
       "type": "package",
       "path": "xamarin.forms/3.0.0.561731",
       "files": [
@@ -896,11 +896,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Automation_UI\\Insured.App.UIAutomation\\EAXamarinAPP\\EAXamarinAPP.iOS\\WBI_WestbendInsurancePRJ.iOS.csproj",
+      "projectUniqueName": "D:\\DUMMY\\UI_Automation\\Insured.App.UIAutomation\\EAXamarinAPP\\EAXamarinAPP.iOS\\WBI_WestbendInsurancePRJ.iOS.csproj",
       "projectName": "WBI_WestbendInsurancePRJ.iOS",
-      "projectPath": "D:\\Automation_UI\\Insured.App.UIAutomation\\EAXamarinAPP\\EAXamarinAPP.iOS\\WBI_WestbendInsurancePRJ.iOS.csproj",
+      "projectPath": "D:\\DUMMY\\UI_Automation\\Insured.App.UIAutomation\\EAXamarinAPP\\EAXamarinAPP.iOS\\WBI_WestbendInsurancePRJ.iOS.csproj",
       "packagesPath": "C:\\Users\\lsharma\\.nuget\\packages\\",
-      "outputPath": "D:\\Automation_UI\\Insured.App.UIAutomation\\EAXamarinAPP\\EAXamarinAPP.iOS\\obj\\",
+      "outputPath": "D:\\DUMMY\\UI_Automation\\Insured.App.UIAutomation\\EAXamarinAPP\\EAXamarinAPP.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
