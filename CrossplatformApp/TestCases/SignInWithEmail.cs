@@ -210,9 +210,17 @@ namespace CrossplatformApp
         [Test]
         public void SignInWithInvalidUserIdandPassword()
             { 
-           
+         
            Currentpage = new SignInEmail();
            Currentpage.As<SignInEmail>().ClickonSignInLink();
+           Currentpage = new SignInEmail();
+            ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx");          
+            Currentpage.As<SignInEmail>().SignIn(ExcelUtil.ReadData(2,"Userid"),ExcelUtil.ReadData(2,"Password")); 
+            ApplicationContext.WaitForElement("InvalidUseridandPwdMessage");
+            Assert.AreEqual("Invalid email or password, please check your information and try again.",ApplicationContext.Query(Currentpage.As<SignInEmail>().InvalidUseridandPwdMessage).First().Text);
+            Currentpage.As<SignInEmail>().ClickOn_Alert_OK();
+         
+       app.Repl();
             }
            
 
