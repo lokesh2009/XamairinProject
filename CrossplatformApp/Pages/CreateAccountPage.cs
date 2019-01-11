@@ -1,5 +1,7 @@
 ﻿using CrossplatformApp.Base;
 using CrossplatformApp.Extension;
+//using CrossplatformWestBendApp.Extension;
+//using CrossplatformWestBendApp.Base;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,16 +10,17 @@ using System.Threading.Tasks;
 using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Queries.AppQuery>;
 
 namespace CrossplatformApp.Pages
+//namespace CrossplatformWestBendApp.Pages
 {
     class  CreateAccountPage : Basepage 
     {
         
         public Query CreateAccount = x => x.Text("Create Account");
-        public Query FirstName = x => x.Id("NoResourceEntry-65");
-        public Query LastName = x => x.Id("NoResourceEntry-66");
-        public Query Emailid = x => x.Id("NoResourceEntry-67");
-        public Query PhoneNo = x => x.Id("NoResourceEntry-68");
-        public Query Next => x => x.Id("NoResourceEntry-70");
+        public Query FirstName = x => x.Id("NoResourceEntry-60");
+        public Query LastName = x => x.Id("NoResourceEntry-62");
+        public Query Emailid = x => x.Id("NoResourceEntry-63");
+        public Query PhoneNo = x => x.Id("NoResourceEntry-64");
+        public Query Next => x => x.Id("NoResourceEntry-68");
 
         // Create Account second page locaters
 
@@ -29,15 +32,20 @@ namespace CrossplatformApp.Pages
         //***************************************************************************
 
         //*************************Click on Create Account link***********************
-        
+        /*
             internal void ClickonCreateAccountLink()
             { 
             
+          //SettingPage.Appcontext.Tap(x=>x.Text("Sign in with email"));
+
           //  ApplicationContext.Tap(CreateAccount);
             CreateAccount.Click();
-            //SettingPage.Appcontext.Tap(x=>x.Text("Sign in with email"));
 
             }
+            
+             */
+
+
       //***********************************************************************************************
       //***************** Click_on_Next_Event_occurs_when_user_passed_values_as_parameter************
 
@@ -52,13 +60,13 @@ namespace CrossplatformApp.Pages
              * 
              */
 
-            /*
+            
             FirstName.EnterTextAndDismissKeyboardAndTapNextElement(FName);
             LastName.EnterTextAndDismissKeyboardAndTapNextElement(Lname);
             Emailid.EnterTextAndDismissKeyboardAndTapNextElement(Email);
             PhoneNo.EnterTextAndDismissKeyboardAndTapNextElement(Phone);
             Next.Click();
-            */
+            
 
             
             ApplicationContext.EnterText(FirstName,FName);

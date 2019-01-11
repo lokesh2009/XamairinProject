@@ -6,14 +6,15 @@ using System.Text;
 using System.Threading.Tasks;
 using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Queries.AppQuery>;
 
+
 namespace CrossplatformApp.Pages
+
+//namespace CrossplatformWestBendApp.Pages
+   
 {
     class SignInEmail: Basepage
     {
-      
-        /*
-         
-         
+        /* 
             app.Tap(x=>x.Text("Sign in with email"));
             app.EnterText(x=>x.Id("NoResourceEntry-62"),"testuser4@mailinator.com");
             app.DismissKeyboard();
@@ -40,13 +41,20 @@ namespace CrossplatformApp.Pages
          */
 
         // Verify Sign in with valid user id and password
+              
+      //  public Query ClickonSignIn => x => x.Property("contentDescription").Contains("ButtonText");
 
         public Query ClickonSignIn => x => x.Text("Sign in with email");
-        public Query EnterEmailid => x => x.Id("NoResourceEntry-62");
-        public Query Enterpassword => x => x.Id("NoResourceEntry-66");
+        public Query EnterEmailid => x => x.Id("NoResourceEntry-57");
+        public Query Enterpassword => x => x.Id("NoResourceEntry-62");
         public Query SignInButton => x => x.Text("SIGN IN");
-        public Query ErrorMessage_InvalidUsername_Password => x => x.Text("You have entered an invalid username or password");
-        public Query ClickOK_Alert => x=> x.Text("OK");
+        public Query Rememberme => x => x.Text("Remember Me");
+        public Query ForgotPassword => x=> x.Text("Forgot password?");
+       
+
+        //*****************Alert is getting depriciated******************
+         public Query ErrorMessage_InvalidUsername_Password => x => x.Text("You have entered an invalid username or password");
+          public Query ClickOK_Alert => x=> x.Text("OK");
 
 
 
@@ -75,12 +83,18 @@ namespace CrossplatformApp.Pages
             { 
             
            
+        ApplicationContext.Tap(EnterEmailid);
             ApplicationContext.EnterText(EnterEmailid,Username);
+            
             ApplicationContext.DismissKeyboard();
+                        
+            ApplicationContext.Tap(Enterpassword);
             ApplicationContext.EnterText(Enterpassword,pass);
+           
             ApplicationContext.DismissKeyboard();
             ApplicationContext.Tap(SignInButton);
             ApplicationContext.Tap(SignInButton);
+ 
  
             }
 

@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Queries.AppQuery>;
 
+//namespace CrossplatformWestBendApp.Extension
+
 namespace CrossplatformApp.Extension
 {
     public static class WestBendExtensionMethods
@@ -55,6 +57,13 @@ namespace CrossplatformApp.Extension
             Base.Basepage.ApplicationContext.Tap(element);
             }
 
+        public static void TapandEnterText(this Query element, String Text)
+            { 
+            Base.Basepage.ApplicationContext.Tap(element);
+            Base.Basepage.ApplicationContext.EnterText(Text);
+            Base.Basepage.ApplicationContext.DismissKeyboard();
+
+            }
         
     }
 }

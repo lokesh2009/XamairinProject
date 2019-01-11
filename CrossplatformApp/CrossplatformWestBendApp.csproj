@@ -26,8 +26,21 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Threading.Tasks.Dataflow, Version=4.5.24.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="XamlBuildTask" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Dapper">
+      <Version>1.50.2</Version>
+    </PackageReference>
+    <PackageReference Include="ExcelDataReader">
+      <Version>3.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="ExcelDataReader.DataSet">
+      <Version>3.0.0</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.AppCenter.Analytics">
       <Version>1.9.0</Version>
     </PackageReference>
@@ -36,27 +49,57 @@
     </PackageReference>
     <PackageReference Include="NUnit" Version="2.6.4" />
     <PackageReference Include="NUnitTestAdapter" Version="2.0.0" />
+    <PackageReference Include="Selenium.WebDriver">
+      <Version>3.141.0</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.UITest">
-      <Version>2.2.5</Version>
+      <Version>2.2.6</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="app-debug.apk" />
-    <None Include="old_app-debug.apk" />
+    <None Include="app-release.apk" />
+    <None Include="TestDataWestband.xlsx" />
+    <None Include="TestData\Sanity_TestingScenario.xlsx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppManager.cs" />
     <Compile Include="Base\Basepage.cs" />
     <Compile Include="Base\BaseStep.cs" />
     <Compile Include="Extension\WestBendExtensionMethods.cs" />
     <Compile Include="Pages\CreateAccountPage.cs" />
+    <Compile Include="Pages\LandingPage.cs" />
+    <Compile Include="Pages\LearnMorePage.cs" />
+    <Compile Include="Pages\Paybill.cs" />
+    <Compile Include="Pages\PolicySummarypage.cs" />
     <Compile Include="Pages\SignInEmail.cs" />
+    <Compile Include="Pages\UserLoggedInPage.cs" />
     <Compile Include="SettingPage.cs" />
     <Compile Include="TestCases\SignInWithEmail.cs" />
     <Compile Include="AppInitializer.cs" />
+    <Compile Include="Utility\ExcelU.cs" />
+    <Compile Include="Utility\ExcelUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Configuration\" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

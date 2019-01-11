@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.UITest;
 
-namespace CrossplatformApp
+namespace CrossplatformWestBendApp
 {
     public class SettingPage
 

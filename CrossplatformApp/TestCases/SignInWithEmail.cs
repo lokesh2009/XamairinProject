@@ -1,22 +1,27 @@
-﻿using System;
-using System.IO;
-using System.Linq;
-using CrossplatformApp;
+﻿using System.Linq;
 using CrossplatformApp.Base;
 using CrossplatformApp.Pages;
-using CrossplatformWestBendApp;
+using CrossplatformApp.Utility;
+using CrossplatformApp;
 using NUnit.Framework;
 using Xamarin.UITest;
-using Xamarin.UITest.Queries;
+using CrossplatformWestBendApp;
+using System;
+//using CrossplatformWestBendApp;
+//using CrossplatformWestBendApp.Base;
+//using CrossplatformWestBendApp.Pages;
+//using CrossplatformWestBendApp.Utility;
 
-namespace CrossplatformWestBendApp
+//namespace CrossplatformWestBendApp
+namespace CrossplatformApp
 {
-	[TestFixture(Platform.Android)]
+    [TestFixture(Platform.Android)]
 //	[TestFixture(Platform.iOS)]
+
 	public class SignInWithEmail:Basepage
 	{
 		private IApp app;
-		Platform platform;
+		readonly Platform platform;
 
 		public SignInWithEmail(Platform platform)
 		{
@@ -26,12 +31,14 @@ namespace CrossplatformWestBendApp
 		[SetUp]
 		public void BeforeEachTest()
 		{
+        
+      
             ApplicationContext = AppInitializer.StartApp(platform);
             app = ApplicationContext;
 
             //app = AppManager.StartApp();
 		}
-
+        
 		[Test]
 		public void VerifySignInEmail()
 		{
@@ -55,7 +62,7 @@ namespace CrossplatformWestBendApp
              // Passing locater in to the app context 
              // Locaters specifically for Android 
 
-            /*
+            
             app.Tap(x=>x.Text("Sign in with email"));
             app.EnterText(x=>x.Id("NoResourceEntry-62"),"testuser4@mailinator.com");
             app.DismissKeyboard();
@@ -78,14 +85,14 @@ namespace CrossplatformWestBendApp
             app.Back();
             app.ScrollDown();
             
-            */
+            
        
             }
 
         [Test]
         public void VerifyInvalidSignIn()
             { 
-          /*  
+          
          
            app.Tap(x=>x.Text("Sign in with email"));
            app.EnterText(x=>x.Id("NoResourceEntry-62"),"lsharma@xtivia");
@@ -96,7 +103,7 @@ namespace CrossplatformWestBendApp
            
            app.Tap(x=>x.Text("OK"));
 
-           */
+           
             }
 
         [Test]
@@ -105,7 +112,7 @@ namespace CrossplatformWestBendApp
           
         //****************************************************************************
        //*************** Create Account with Password verification************************
-           /* 
+            
                app.Tap(x=>x.Text("Create Account"));
                app.EnterText(x=>x.Id("NoResourceEntry-65"),"Lokesh");
                app.Tap(x=>x.Id("NoResourceEntry-66"));
@@ -124,7 +131,7 @@ namespace CrossplatformWestBendApp
                app.Tap(x=>x.Id("NoResourceEntry-107"));
                app.Tap(x=>x.Id("NoResourceEntry-107"));
                app.Tap(x=>x.Id("NoResourceEntry-118"));
-        */
+        
             }
 	
          
@@ -132,11 +139,19 @@ namespace CrossplatformWestBendApp
                 public void CreateAccount_UsingPOM()
             { 
             
+           Currentpage = new LandingPage ();
+           Currentpage.As<LandingPage>().Clickon_CreateAccountLink();
+           Currentpage = new CreateAccountPage();
+           Currentpage.As<CreateAccountPage>().ClickNext("lokesh","sharma","lsharma@xtivia.com","8447520166");
+           Currentpage.As<CreateAccountPage>().CompleteCreateAccount("Gemini@12","Gemini@12");
+    
+            /*
             Currentpage = new CreateAccountPage();
             Currentpage.As<CreateAccountPage>().ClickonCreateAccountLink();
             Currentpage.As<CreateAccountPage>().ClickNext("lokesh","sharma","lsharma@xtivia.com","8447520166");
             Currentpage.As<CreateAccountPage>().CompleteCreateAccount("Gemini@12","Gemini@12");
-           
+           */
+
            
             /*
              * This is POM code where i am using without Pagefactory approch
@@ -173,14 +188,25 @@ namespace CrossplatformWestBendApp
         [Test]
         public void SignInWithInvalidUserIdandPassword()
             { 
-            
-            
+           
            Currentpage = new SignInEmail();
            Currentpage.As<SignInEmail>().ClickonSignInLink();
-
-            
             }
            
-        
+
+        [Test]
+        public void SignInWithTestDataUsingExcelSheet()
+            { 
+            //app.Repl();
+            Currentpage = new LandingPage ();
+            Currentpage.As<LandingPage>().ClickOn_SignINwithEmailidLink();
+            Currentpage = new SignInEmail();
+            ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx");          
+            Currentpage.As<SignInEmail>().SignIn(ExcelUtil.ReadData(2,"Userid"),ExcelUtil.ReadData(2,"Password")); 
+               
+            //Console.WriteLine($"Userid: {ExcelUtil.ReadData(1, "Userid")} and Password: {ExcelUtil.ReadData(1, "Password")}");
+
+            }
+       
         }
 }
