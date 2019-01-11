@@ -57,17 +57,17 @@ namespace CrossplatformApp
          * */
             
 
-            //app.Repl();
+            app.Repl();
             
              // Passing locater in to the app context 
              // Locaters specifically for Android 
-
+             /*
             
             app.Tap(x=>x.Text("Sign in with email"));
-            app.EnterText(x=>x.Id("NoResourceEntry-62"),"testuser4@mailinator.com");
+            app.EnterText(x=>x.Id("NoResourceEntry-64"),"testuser4@mailinator.com");
             app.DismissKeyboard();
-            app.Tap(x=>x.Id("NoResourceEntry-66"));
-            app.EnterText(x=>x.Id("NoResourceEntry-66"),"Aa@12345");
+            app.Tap(x=>x.Id("NoResourceEntry-65"));
+            app.EnterText(x=>x.Id("NoResourceEntry-65"),"Aa@12345");
             app.DismissKeyboard();
             app.Tap(x=>x.Text("SIGN IN"));;
             app.Tap(x=>x.Id("NoResourceEntry-243"));
@@ -85,7 +85,7 @@ namespace CrossplatformApp
             app.Back();
             app.ScrollDown();
             
-            
+            */
        
             }
 
@@ -93,7 +93,7 @@ namespace CrossplatformApp
         public void VerifyInvalidSignIn()
             { 
           
-         
+         /*
            app.Tap(x=>x.Text("Sign in with email"));
            app.EnterText(x=>x.Id("NoResourceEntry-62"),"lsharma@xtivia");
            app.Tap(x=>x.Id("NoResourceEntry-66"));
@@ -103,7 +103,15 @@ namespace CrossplatformApp
            
            app.Tap(x=>x.Text("OK"));
 
+           */
+            Currentpage = new LandingPage ();
+            Currentpage.As<LandingPage>().ClickOn_SignINwithEmailidLink();
+            Currentpage = new SignInEmail();
+            ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx");          
+            Currentpage.As<SignInEmail>().SignIn(ExcelUtil.ReadData(2,"Userid"),ExcelUtil.ReadData(2,"Password")); 
+            
            
+
             }
 
         [Test]
@@ -174,14 +182,28 @@ namespace CrossplatformApp
         public void SignwithBlankUseridandPassword()
             
             { 
-        
+          //  "Username and password can't be blank"
+
+          //  app.Repl();
+
+            
+            
+            Currentpage = new LandingPage ();
+            Currentpage.As<LandingPage>().ClickOn_SignINwithEmailidLink();
+            Currentpage = new SignInEmail();
+            Currentpage.As<SignInEmail>().SignInWithoutanyUsernameAndPassword();
+            Assert.AreEqual("Username and password can't be blank",ApplicationContext.Query(Currentpage.As<SignInEmail>().ErrorMessage_InvalidUsername_Password).First().Text);
+            Currentpage.As<SignInEmail>().ClickOn_Alert_OK();
+       
+
+        /*
            Currentpage = new SignInEmail();
            Currentpage.As<SignInEmail>().ClickonSignInLink();
            Currentpage.As<SignInEmail>().SignInWithoutanyUsernameAndPassword();
            //Assert.AreEqual("You have entered an invalid username or password", app.Query("You have entered an invalid username or password").First().Text);
            Assert.AreEqual("You have entered an invalid username or password",ApplicationContext.Query(Currentpage.As<SignInEmail>().ErrorMessage_InvalidUsername_Password).First().Text);
            Currentpage.As<SignInEmail>().ClickOn_Alert_OK();
-   
+   */
             } 
             
 
@@ -202,7 +224,7 @@ namespace CrossplatformApp
             Currentpage.As<LandingPage>().ClickOn_SignINwithEmailidLink();
             Currentpage = new SignInEmail();
             ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx");          
-            Currentpage.As<SignInEmail>().SignIn(ExcelUtil.ReadData(2,"Userid"),ExcelUtil.ReadData(2,"Password")); 
+            Currentpage.As<SignInEmail>().SignIn(ExcelUtil.ReadData(3,"Userid"),ExcelUtil.ReadData(3,"Password")); 
                
             //Console.WriteLine($"Userid: {ExcelUtil.ReadData(1, "Userid")} and Password: {ExcelUtil.ReadData(1, "Password")}");
 

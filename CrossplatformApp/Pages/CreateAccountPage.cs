@@ -68,11 +68,13 @@ namespace CrossplatformApp.Pages
             Next.Click();
             
 
-            
+            /*
             ApplicationContext.EnterText(FirstName,FName);
             
             ApplicationContext.DismissKeyboard();
             ApplicationContext.Tap(LastName);
+           
+              */
 
             //Provide Entry in Last name
             ApplicationContext.EnterText(LastName, Lname);

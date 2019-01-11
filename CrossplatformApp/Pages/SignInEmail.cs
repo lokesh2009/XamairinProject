@@ -50,10 +50,13 @@ namespace CrossplatformApp.Pages
         public Query SignInButton => x => x.Text("SIGN IN");
         public Query Rememberme => x => x.Text("Remember Me");
         public Query ForgotPassword => x=> x.Text("Forgot password?");
-       
+        public Query Snakbartext => x => x.Id("snackbar_text");
+        public Query SnakbarOk => x => x.Id("snackbar_action");
+
+        
 
         //*****************Alert is getting depriciated******************
-         public Query ErrorMessage_InvalidUsername_Password => x => x.Text("You have entered an invalid username or password");
+         public Query ErrorMessage_InvalidUsername_Password => x => x.Text("Username and password can't be blank");
           public Query ClickOK_Alert => x=> x.Text("OK");
 
 
@@ -73,9 +76,6 @@ namespace CrossplatformApp.Pages
             
             ApplicationContext.Tap(ClickonSignIn);
 
-            
-            
-
             }
 
  
@@ -83,7 +83,7 @@ namespace CrossplatformApp.Pages
             { 
             
            
-        ApplicationContext.Tap(EnterEmailid);
+            ApplicationContext.Tap(EnterEmailid);
             ApplicationContext.EnterText(EnterEmailid,Username);
             
             ApplicationContext.DismissKeyboard();
@@ -103,15 +103,14 @@ namespace CrossplatformApp.Pages
         internal void SignInWithoutanyUsernameAndPassword()
             { 
             
-            ApplicationContext.Tap(SignInButton);
-            
+            ApplicationContext.Tap(SignInButton); 
             ApplicationContext.WaitForElement(ErrorMessage_InvalidUsername_Password);
        
             }
 
         internal void ClickOn_Alert_OK()
             { 
-            ApplicationContext.Tap(ClickOK_Alert);
+            ApplicationContext.Tap(SnakbarOk);
 
             }
         
