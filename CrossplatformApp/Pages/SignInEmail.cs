@@ -94,7 +94,7 @@ namespace CrossplatformApp.Pages
            
             ApplicationContext.DismissKeyboard();
             ApplicationContext.Tap(SignInButton);
-
+            
             ApplicationContext.Tap(SignInButton);
  
  
@@ -115,7 +115,12 @@ namespace CrossplatformApp.Pages
             ApplicationContext.Tap(SnakbarOk);
 
             }
-        
 
+        internal void Waitingelement()
+            { 
+            ApplicationContext.WaitForElement(InvalidUseridandPwdMessage);
+
+            
+            }
     }
 }

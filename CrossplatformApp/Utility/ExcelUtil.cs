@@ -37,7 +37,7 @@ namespace CrossplatformApp.Utility
         //    return resultTable;
         //}
 
-        public static DataTable ExcelToDataTable(string fileName)
+        public static DataTable ExcelToDataTable(string fileName, string sheetname)
         {
             using (var stream = File.Open(fileName, FileMode.Open, FileAccess.Read))
             {
@@ -54,7 +54,7 @@ namespace CrossplatformApp.Utility
                     //Get all the Tables
                     DataTableCollection table = result.Tables;
                     //Store it in DataTable
-                    DataTable resultTable = table["Sheet1"];
+                    DataTable resultTable = table[sheetname];
                     //return
                     return resultTable;
                 }
@@ -69,9 +69,9 @@ namespace CrossplatformApp.Utility
         /// Populate the data in collection
         /// </summary>
         /// <param name="fileName"></param>
-        public static void PopulateInCollection(string fileName)
+        public static void PopulateInCollection(string fileName, string sheetname)
         {
-            DataTable table = ExcelToDataTable(fileName);
+            DataTable table = ExcelToDataTable(fileName,sheetname);
 
             //Iterate through the rows and columns of the Table
             for (int row = 1; row <= table.Rows.Count; row++)

@@ -7,6 +7,7 @@ using NUnit.Framework;
 using Xamarin.UITest;
 using CrossplatformWestBendApp;
 using System;
+using CrossplatformApp.Extension;
 //using CrossplatformWestBendApp;
 //using CrossplatformWestBendApp.Base;
 //using CrossplatformWestBendApp.Pages;
@@ -107,7 +108,7 @@ namespace CrossplatformApp
             Currentpage = new LandingPage ();
             Currentpage.As<LandingPage>().ClickOn_SignINwithEmailidLink();
             Currentpage = new SignInEmail();
-            ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx");          
+            ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","Sheet1");          
             Currentpage.As<SignInEmail>().SignIn(ExcelUtil.ReadData(2,"Userid"),ExcelUtil.ReadData(2,"Password")); 
             
            
@@ -214,24 +215,24 @@ namespace CrossplatformApp
            Currentpage = new SignInEmail();
            Currentpage.As<SignInEmail>().ClickonSignInLink();
            Currentpage = new SignInEmail();
-            ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx");          
-            Currentpage.As<SignInEmail>().SignIn(ExcelUtil.ReadData(2,"Userid"),ExcelUtil.ReadData(2,"Password")); 
-            ApplicationContext.WaitForElement("InvalidUseridandPwdMessage");
-            Assert.AreEqual("Invalid email or password, please check your information and try again.",ApplicationContext.Query(Currentpage.As<SignInEmail>().InvalidUseridandPwdMessage).First().Text);
-            Currentpage.As<SignInEmail>().ClickOn_Alert_OK();
+           ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","Sheet1");          
+           Currentpage.As<SignInEmail>().SignIn(ExcelUtil.ReadData(2,"Userid"),ExcelUtil.ReadData(2,"Password")); 
+           Currentpage.As<SignInEmail>().Waitingelement();
+           Assert.AreEqual("Invalid email or password, please check your information and try again.",ApplicationContext.Query(Currentpage.As<SignInEmail>().InvalidUseridandPwdMessage).First().Text);
+           Currentpage.As<SignInEmail>().ClickOn_Alert_OK();
          
-       app.Repl();
+       //app.Repl();
             }
            
 
         [Test]
-        public void SignInWithTestDataUsingExcelSheet()
+        public void SignInWithValidUseridandPassword()
             { 
             //app.Repl();
             Currentpage = new LandingPage ();
             Currentpage.As<LandingPage>().ClickOn_SignINwithEmailidLink();
             Currentpage = new SignInEmail();
-            ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx");          
+            ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","Sheet1");          
             Currentpage.As<SignInEmail>().SignIn(ExcelUtil.ReadData(3,"Userid"),ExcelUtil.ReadData(3,"Password")); 
                
             //Console.WriteLine($"Userid: {ExcelUtil.ReadData(1, "Userid")} and Password: {ExcelUtil.ReadData(1, "Password")}");
