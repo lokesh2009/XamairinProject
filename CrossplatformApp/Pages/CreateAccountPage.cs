@@ -94,6 +94,7 @@ namespace CrossplatformApp.Pages
 
             
             }
+        
 
         internal void CompleteCreateAccount(string password, string confirmpassword)
             { 
@@ -118,6 +119,26 @@ namespace CrossplatformApp.Pages
             {
          
             ApplicationContext.WaitForElement(Password);
+
+            }
+        // Registration First page parameter
+                internal void RegistrationFpage(string Fname, string Lname,string Email, string contact )
+            { 
+              //ApplicationContext.TapandEnterText(FirstName,Fname);
+              WestBendExtensionMethods.TapandEnterText(FirstName,Fname);
+              WestBendExtensionMethods.TapandEnterText(LastName,Lname);
+              WestBendExtensionMethods.TapandEnterText(Emailid,Email);
+              WestBendExtensionMethods.TapandEnterText(PhoneNo,contact);
+              ApplicationContext.Tap(Next);
+
+            } 
+
+        internal void RegistrationSecondpage(string password, string confirmpassword)
+            { 
+            
+            WestBendExtensionMethods.TapandEnterText(Password,password);
+            WestBendExtensionMethods.TapandEnterText(ConfirmPassword,confirmpassword);
+            ApplicationContext.Tap(CreateAccButton);
 
             }
 

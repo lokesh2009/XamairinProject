@@ -57,10 +57,10 @@ namespace CrossplatformApp.Extension
             Base.Basepage.ApplicationContext.Tap(element);
             }
 
-        public static void TapandEnterText(this Query element, String Text)
+        public static void TapandEnterText(this Query element, string text)
             { 
             Base.Basepage.ApplicationContext.Tap(element);
-            Base.Basepage.ApplicationContext.EnterText(Text);
+            Base.Basepage.ApplicationContext.EnterText(text);
             Base.Basepage.ApplicationContext.DismissKeyboard();
 
             }
