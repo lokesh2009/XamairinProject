@@ -128,6 +128,7 @@ namespace CrossplatformApp.Pages
         // Registration First page parameter
                 internal void RegistrationFpage(string Fname, string Lname,string Email, string contact )
             { 
+           
             ApplicationContext.Tap(FirstName);
             WestBendExtensionMethods.EnterText(FirstName,Fname);
             ApplicationContext.DismissKeyboard();
@@ -145,9 +146,11 @@ namespace CrossplatformApp.Pages
             ApplicationContext.DismissKeyboard();
             Thread.Sleep(2000);
 
+            
             ApplicationContext.Tap(PhoneNo);
             ApplicationContext.Tap(PhoneNo);
             Thread.Sleep(2000);
+
             ApplicationContext.EnterText(PhoneNo, contact);
             ApplicationContext.DismissKeyboard();
             Thread.Sleep(2000);
@@ -171,5 +174,10 @@ namespace CrossplatformApp.Pages
 
             }
 
+        internal void ClickOn_Alert_OK()
+            { 
+            ApplicationContext.Tap(SnakbarOk);
+
+            }
     }
 }

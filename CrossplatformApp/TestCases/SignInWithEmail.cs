@@ -45,13 +45,75 @@ namespace CrossplatformApp
             Currentpage = new LandingPage ();
             Currentpage.As<LandingPage>().ClickOn_SignINwithEmailidLink();
             Currentpage = new SignInEmail();
-            ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","Sheet1");          
+            ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","LoginData");          
             Currentpage.As<SignInEmail>().SignIn(ExcelUtil.ReadData(2,"Userid"),ExcelUtil.ReadData(2,"Password")); 
             
             }
-     
+                 
+                     [Test]
+                public void CreateAccount_With_FnameBlank()
+            { 
+           Currentpage = new LandingPage ();
+           Currentpage.As<LandingPage>().Clickon_CreateAccountLink();
+           Currentpage = new CreateAccountPage();
+           //Currentpage.As<CreateAccountPage>().ClickNext("lokesh","sharma","lsharma@xtivia.com","8447520166");
+           //Currentpage.As<CreateAccountPage>().CompleteCreateAccount("Gemini@12","Gemini@12");
+           ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","RegistrationData");
+           Currentpage.As<CreateAccountPage>().RegistrationFpage(ExcelUtil.ReadData(2,"Firstname"),ExcelUtil.ReadData(2,"Lastname"),ExcelUtil.ReadData(2,"Email"),ExcelUtil.ReadData(2,"Contact"));
+            Assert.AreEqual("All fields in this form are required",ApplicationContext.Query(Currentpage.As<CreateAccountPage>().UsernotprovideanydataandclickonNext).First().Text);
+            Currentpage.As<CreateAccountPage>().ClickOn_Alert_OK();
+            }
+
+                     [Test]
+                public void CreateAccount_With_BlankData()
+            { 
+           Currentpage = new LandingPage ();
+           Currentpage.As<LandingPage>().Clickon_CreateAccountLink();
+           Currentpage = new CreateAccountPage();
+           //Currentpage.As<CreateAccountPage>().ClickNext("lokesh","sharma","lsharma@xtivia.com","8447520166");
+           //Currentpage.As<CreateAccountPage>().CompleteCreateAccount("Gemini@12","Gemini@12");
+           ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","RegistrationData");
+           Currentpage.As<CreateAccountPage>().RegistrationFpage(ExcelUtil.ReadData(6,"Firstname"),ExcelUtil.ReadData(6,"Lastname"),ExcelUtil.ReadData(6,"Email"),ExcelUtil.ReadData(6,"Contact"));
+            Assert.AreEqual("All fields in this form are required",ApplicationContext.Query(Currentpage.As<CreateAccountPage>().UsernotprovideanydataandclickonNext).First().Text);
+            Currentpage.As<CreateAccountPage>().ClickOn_Alert_OK();
+            }
+
+
+
+
+                     [Test]
+                public void CreateAccount_With_LnameBlank()
+            { 
+           Currentpage = new LandingPage ();
+           Currentpage.As<LandingPage>().Clickon_CreateAccountLink();
+           Currentpage = new CreateAccountPage();
+           //Currentpage.As<CreateAccountPage>().ClickNext("lokesh","sharma","lsharma@xtivia.com","8447520166");
+           //Currentpage.As<CreateAccountPage>().CompleteCreateAccount("Gemini@12","Gemini@12");
+           ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","RegistrationData");
+           Currentpage.As<CreateAccountPage>().RegistrationFpage(ExcelUtil.ReadData(2,"Firstname"),ExcelUtil.ReadData(2,"Lastname"),ExcelUtil.ReadData(2,"Email"),ExcelUtil.ReadData(2,"Contact"));
+            Assert.AreEqual("All fields in this form are required",ApplicationContext.Query(Currentpage.As<CreateAccountPage>().UsernotprovideanydataandclickonNext).First().Text);
+            Currentpage.As<CreateAccountPage>().ClickOn_Alert_OK();
+            }
+
+                     [Test]
+                public void CreateAccount_With_EmailBlank()
+            {
+            
+           Currentpage = new LandingPage ();
+           Currentpage.As<LandingPage>().Clickon_CreateAccountLink();
+           Currentpage = new CreateAccountPage();
+           //Currentpage.As<CreateAccountPage>().ClickNext("lokesh","sharma","lsharma@xtivia.com","8447520166");
+           //Currentpage.As<CreateAccountPage>().CompleteCreateAccount("Gemini@12","Gemini@12");
+           ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","RegistrationData");
+           Currentpage.As<CreateAccountPage>().RegistrationFpage(ExcelUtil.ReadData(4,"Firstname"),ExcelUtil.ReadData(4,"Lastname"),ExcelUtil.ReadData(4,"Email"),ExcelUtil.ReadData(4,"Contact"));
+            Assert.AreEqual("All fields in this form are required",ApplicationContext.Query(Currentpage.As<CreateAccountPage>().UsernotprovideanydataandclickonNext).First().Text);
+            Currentpage.As<CreateAccountPage>().ClickOn_Alert_OK();
+            
+            }
+
+
              [Test]    
-                public void CreateAccount_UsingPOM()
+                public void CreateAccount_With_BlankPhoneNoMessage()
             { 
             
            Currentpage = new LandingPage ();
@@ -60,7 +122,12 @@ namespace CrossplatformApp
            //Currentpage.As<CreateAccountPage>().ClickNext("lokesh","sharma","lsharma@xtivia.com","8447520166");
            //Currentpage.As<CreateAccountPage>().CompleteCreateAccount("Gemini@12","Gemini@12");
            ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","RegistrationData");
-           Currentpage.As<CreateAccountPage>().RegistrationFpage(ExcelUtil.ReadData(1,"Firstname"),ExcelUtil.ReadData(2,"Lastname"),ExcelUtil.ReadData(1,"Email"),ExcelUtil.ReadData(1,"Contact"));
+           Currentpage.As<CreateAccountPage>().RegistrationFpage(ExcelUtil.ReadData(1,"Firstname"),ExcelUtil.ReadData(1,"Lastname"),ExcelUtil.ReadData(1,"Email"),ExcelUtil.ReadData(1,"Contact"));
+            Assert.AreEqual("All fields in this form are required",ApplicationContext.Query(Currentpage.As<CreateAccountPage>().UsernotprovideanydataandclickonNext).First().Text);
+            Currentpage.As<CreateAccountPage>().ClickOn_Alert_OK();
+       
+
+
 
          
             /*
@@ -141,7 +208,7 @@ namespace CrossplatformApp
             Currentpage = new LandingPage ();
             Currentpage.As<LandingPage>().ClickOn_SignINwithEmailidLink();
             Currentpage = new SignInEmail();
-            ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","Sheet1");          
+            ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","LoginData");          
             Currentpage.As<SignInEmail>().SignIn(ExcelUtil.ReadData(3,"Userid"),ExcelUtil.ReadData(3,"Password")); 
                
             //Console.WriteLine($"Userid: {ExcelUtil.ReadData(1, "Userid")} and Password: {ExcelUtil.ReadData(1, "Password")}");

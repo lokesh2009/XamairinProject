@@ -16,7 +16,7 @@ namespace CrossplatformApp.Extension
 
         public static void EnterText(this Query element, string text)
             { 
-            Base.Basepage.ApplicationContext.EnterText("text");
+            Base.Basepage.ApplicationContext.EnterText(text);
             }
 
         
