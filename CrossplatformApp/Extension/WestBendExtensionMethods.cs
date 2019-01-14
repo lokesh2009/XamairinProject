@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using Xamarin.UITest.Queries;
 using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Queries.AppQuery>;
 
 //namespace CrossplatformWestBendApp.Extension
@@ -14,8 +16,10 @@ namespace CrossplatformApp.Extension
 
         public static void EnterText(this Query element, string text)
             { 
-            Base.Basepage.ApplicationContext.EnterText(text);
+            Base.Basepage.ApplicationContext.EnterText("text");
             }
+
+        
 
         public static void ClearAndEnterText(this Query element, string text)
             { 
@@ -59,11 +63,18 @@ namespace CrossplatformApp.Extension
 
         public static void TapandEnterText(this Query element, string text)
             { 
+                          Thread.Sleep(2000);
             Base.Basepage.ApplicationContext.Tap(element);
             Base.Basepage.ApplicationContext.EnterText(text);
             Base.Basepage.ApplicationContext.DismissKeyboard();
 
+                          Thread.Sleep(2000);
+
             }
-        
+
+        internal static void EnterText(Query phoneNo, int contact)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

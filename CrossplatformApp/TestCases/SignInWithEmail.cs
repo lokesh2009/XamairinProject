@@ -58,9 +58,11 @@ namespace CrossplatformApp
            Currentpage.As<LandingPage>().Clickon_CreateAccountLink();
            Currentpage = new CreateAccountPage();
            //Currentpage.As<CreateAccountPage>().ClickNext("lokesh","sharma","lsharma@xtivia.com","8447520166");
-           Currentpage.As<CreateAccountPage>().RegistrationFpage(ExcelUtil.ReadData(1,"");
-           Currentpage.As<CreateAccountPage>().CompleteCreateAccount("Gemini@12","Gemini@12");
-    
+           //Currentpage.As<CreateAccountPage>().CompleteCreateAccount("Gemini@12","Gemini@12");
+           ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","RegistrationData");
+           Currentpage.As<CreateAccountPage>().RegistrationFpage(ExcelUtil.ReadData(1,"Firstname"),ExcelUtil.ReadData(2,"Lastname"),ExcelUtil.ReadData(1,"Email"),ExcelUtil.ReadData(1,"Contact"));
+
+         
             /*
             Currentpage = new CreateAccountPage();
             Currentpage.As<CreateAccountPage>().ClickonCreateAccountLink();
@@ -122,7 +124,7 @@ namespace CrossplatformApp
            Currentpage = new SignInEmail();
            Currentpage.As<SignInEmail>().ClickonSignInLink();
            Currentpage = new SignInEmail();
-           ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","Sheet1");          
+           ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","LoginData");          
            Currentpage.As<SignInEmail>().SignIn(ExcelUtil.ReadData(2,"Userid"),ExcelUtil.ReadData(2,"Password")); 
            Currentpage.As<SignInEmail>().Waitingelement();
            Assert.AreEqual("Invalid email or password, please check your information and try again.",ApplicationContext.Query(Currentpage.As<SignInEmail>().InvalidUseridandPwdMessage).First().Text);
@@ -151,8 +153,11 @@ namespace CrossplatformApp
             { 
             
             Currentpage = new LandingPage ();
-            Currentpage.As<LandingPage>().ClickOn_SignINwithEmailidLink();
-            Currentpage = new SignInEmail();
+            Currentpage.As<LandingPage>().Clickon_CreateAccountLink();
+            Currentpage = new CreateAccountPage();
+            app.Repl();
+
+
       
             
             }

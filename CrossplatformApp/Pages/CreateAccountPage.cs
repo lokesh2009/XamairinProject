@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Queries.AppQuery>;
 
@@ -20,7 +21,10 @@ namespace CrossplatformApp.Pages
         public Query LastName = x => x.Id("NoResourceEntry-62");
         public Query Emailid = x => x.Id("NoResourceEntry-63");
         public Query PhoneNo = x => x.Id("NoResourceEntry-64");
-        public Query Next => x => x.Id("NoResourceEntry-68");
+        public Query Next => x => x.Text("Next");
+        public Query SnakbarOk => x => x.Id("snackbar_action");
+        public Query UsernotprovideanydataandclickonNext => x =>x.Text("All fields in this form are required");
+
 
         // Create Account second page locaters
 
@@ -124,12 +128,37 @@ namespace CrossplatformApp.Pages
         // Registration First page parameter
                 internal void RegistrationFpage(string Fname, string Lname,string Email, string contact )
             { 
-              //ApplicationContext.TapandEnterText(FirstName,Fname);
-              WestBendExtensionMethods.TapandEnterText(FirstName,Fname);
-              WestBendExtensionMethods.TapandEnterText(LastName,Lname);
-              WestBendExtensionMethods.TapandEnterText(Emailid,Email);
-              WestBendExtensionMethods.TapandEnterText(PhoneNo,contact);
-              ApplicationContext.Tap(Next);
+            ApplicationContext.Tap(FirstName);
+            WestBendExtensionMethods.EnterText(FirstName,Fname);
+            ApplicationContext.DismissKeyboard();
+             Thread.Sleep(2000);
+
+            ApplicationContext.Tap(LastName);
+            ApplicationContext.Tap(LastName);
+            WestBendExtensionMethods.EnterText(LastName,Lname);
+            ApplicationContext.DismissKeyboard();
+            Thread.Sleep(2000);
+            
+            ApplicationContext.Tap(Emailid);
+            ApplicationContext.Tap(Emailid);
+            WestBendExtensionMethods.EnterText(Emailid,Email);
+            ApplicationContext.DismissKeyboard();
+            Thread.Sleep(2000);
+
+            ApplicationContext.Tap(PhoneNo);
+            ApplicationContext.Tap(PhoneNo);
+            Thread.Sleep(2000);
+            ApplicationContext.EnterText(PhoneNo, contact);
+            ApplicationContext.DismissKeyboard();
+            Thread.Sleep(2000);
+
+            ApplicationContext.Tap(Next);
+            ApplicationContext.Tap(Next);
+
+           
+
+            
+                   
 
             } 
 
