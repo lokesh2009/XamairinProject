@@ -126,7 +126,17 @@ namespace CrossplatformApp.Pages
 
             }
         // Registration First page parameter
-                internal void RegistrationFpage(string Fname, string Lname,string Email, string contact )
+        
+            internal void Registrationwithoutdata()
+        { 
+        
+            ApplicationContext.Tap(Next);
+            ApplicationContext.Tap(Next);
+
+        }
+            
+            
+            internal void RegistrationFpage(string Fname, string Lname,string Email, string contact )
             { 
            
             ApplicationContext.Tap(FirstName);
