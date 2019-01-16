@@ -18,9 +18,7 @@ namespace CrossplatformApp.Extension
             { 
             Base.Basepage.ApplicationContext.EnterText(text);
             }
-
         
-
         public static void ClearAndEnterText(this Query element, string text)
             { 
             Base.Basepage.ApplicationContext.ClearText(element);
@@ -71,8 +69,10 @@ namespace CrossplatformApp.Extension
                           Thread.Sleep(2000);
 
             }
+        
 
-        internal static void EnterText(Query phoneNo, int contact)
+ 
+        internal static void TapandEnterText(Query phoneNo, double contact1)
         {
             throw new NotImplementedException();
         }

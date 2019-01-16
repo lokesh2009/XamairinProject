@@ -140,45 +140,28 @@ namespace CrossplatformApp.Pages
             { 
            
             ApplicationContext.Tap(FirstName);
-            WestBendExtensionMethods.EnterText(FirstName,Fname);
-            ApplicationContext.DismissKeyboard();
-             Thread.Sleep(2000);
-
+            WestBendExtensionMethods.TapandEnterText(FirstName,Fname);
+            
             ApplicationContext.Tap(LastName);
-            ApplicationContext.Tap(LastName);
-            WestBendExtensionMethods.EnterText(LastName,Lname);
-            ApplicationContext.DismissKeyboard();
-            Thread.Sleep(2000);
+            WestBendExtensionMethods.TapandEnterText(LastName,Lname);
             
             ApplicationContext.Tap(Emailid);
-            ApplicationContext.Tap(Emailid);
-            WestBendExtensionMethods.EnterText(Emailid,Email);
-            ApplicationContext.DismissKeyboard();
-            Thread.Sleep(2000);
-
+            WestBendExtensionMethods.TapandEnterText(Emailid,Email);
             
             ApplicationContext.Tap(PhoneNo);
-            ApplicationContext.Tap(PhoneNo);
-            Thread.Sleep(2000);
-
-            ApplicationContext.EnterText(PhoneNo, contact);
-            ApplicationContext.DismissKeyboard();
-            Thread.Sleep(2000);
-
-            ApplicationContext.Tap(Next);
-            ApplicationContext.Tap(Next);
-
+            // String contact need to convert in Double
+            WestBendExtensionMethods.TapandEnterText(PhoneNo,contact);
            
-
-            
-                   
+            ApplicationContext.Tap(Next);
+            ApplicationContext.Tap(Next);
 
             } 
 
         internal void RegistrationSecondpage(string password, string confirmpassword)
             { 
-            
+            ApplicationContext.Tap(Password);
             WestBendExtensionMethods.TapandEnterText(Password,password);
+            ApplicationContext.Tap(ConfirmPassword);
             WestBendExtensionMethods.TapandEnterText(ConfirmPassword,confirmpassword);
             ApplicationContext.Tap(CreateAccButton);
 
