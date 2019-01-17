@@ -60,7 +60,7 @@ namespace CrossplatformApp
            //Currentpage.As<CreateAccountPage>().ClickNext("lokesh","sharma","lsharma@xtivia.com","8447520166");
            //Currentpage.As<CreateAccountPage>().CompleteCreateAccount("Gemini@12","Gemini@12");
            ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","RegistrationData");
-           Currentpage.As<CreateAccountPage>().RegistrationFpage(ExcelUtil.ReadData(1,"Firstname"),ExcelUtil.ReadData(1,"Lastname"),ExcelUtil.ReadData(1,"Email"),ExcelUtil.ReadData(1,"Contact"));
+           Currentpage.As<CreateAccountPage>().RegistrationFpage(ExcelUtil.ReadData(2,"Firstname"),ExcelUtil.ReadData(2,"Lastname"),ExcelUtil.ReadData(2,"Email"),ExcelUtil.ReadData(2,"Contact"));
          //  Assert.AreEqual("All fields in this form are required",ApplicationContext.Query(Currentpage.As<CreateAccountPage>().UsernotprovideanydataandclickonNext).First().Text);
          //  Currentpage.As<CreateAccountPage>().ClickOn_Alert_OK();
            
