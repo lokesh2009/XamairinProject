@@ -76,10 +76,12 @@ namespace CrossplatformApp
            ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","RegistrationData");
            Currentpage.As<CreateAccountPage>().RegistrationFpage(ExcelUtil.ReadData(1,"Firstname"),ExcelUtil.ReadData(1,"Lastname"),ExcelUtil.ReadData(1,"Email"),ExcelUtil.ReadData(1,"Contact"));
            Currentpage.As<CreateAccountPage>().RegistrationSecondpage(ExcelUtil.ReadData(1,"Password"),ExcelUtil.ReadData(1,"ConfirmPassword"));
+           Currentpage.As<CreateAccountPage>().ClickonIAgreeCheckbox();
+           //Currentpage.As<CreateAccountPage>().ClickonCreateAccountButton();
 
 
            // Assert.AreEqual("All fields in this form are required",ApplicationContext.Query(Currentpage.As<CreateAccountPage>().UsernotprovideanydataandclickonNext).First().Text);
-           Currentpage.As<CreateAccountPage>().ClickOn_Alert_OK();
+          // Currentpage.As<CreateAccountPage>().ClickOn_Alert_OK();
             }
 
 
@@ -264,7 +266,7 @@ app.DismissKeyboard();
 app.Tap(x=>x.Id("NoResourceEntry-64"));
 app.Tap(x=>x.Id("NoResourceEntry-64"));
 app.EnterText(x=>x.Id("NoResourceEntry-64"),"8666870987");
-
+   app.Repl();
 
       
             

@@ -28,10 +28,10 @@ namespace CrossplatformApp.Pages
 
         // Create Account second page locaters
 
-        public Query Password => x => x.Id("NoResourceEntry-78");
-        public Query ConfirmPassword => x => x.Id("NoResourceEntry-84");
-        public Query IagreeCheckbox => x => x.Id("NoResourceEntry-107");
-        public Query CreateAccButton => x => x.Id("NoResourceEntry-118");
+        public Query Password => x => x.Id("NoResourceEntry-99");
+        public Query ConfirmPassword => x => x.Id("NoResourceEntry-106");
+        public Query IagreeCheckbox => x => x.Id("NoResourceEntry-129");
+        public Query CreateAccButton => x => x.Id("NoResourceEntry-145");
 
         //***************************************************************************
 
@@ -159,14 +159,33 @@ namespace CrossplatformApp.Pages
 
         internal void RegistrationSecondpage(string password, string confirmpassword)
             { 
+
+          /*             
+            ApplicationContext.Tap(FirstName);
+          
+            WestBendExtensionMethods.TapandEnterText(FirstName,Fname);
+            
+            ApplicationContext.Tap(LastName);
+            WestBendExtensionMethods.TapandEnterText(LastName,Lname);
+
+            */
             ApplicationContext.Tap(Password);
             WestBendExtensionMethods.TapandEnterText(Password,password);
             ApplicationContext.Tap(ConfirmPassword);
             WestBendExtensionMethods.TapandEnterText(ConfirmPassword,confirmpassword);
-            ApplicationContext.Tap(CreateAccButton);
-
+          
+            }
+        public void ClickonIAgreeCheckbox()
+            { 
+            ApplicationContext.Tap(IagreeCheckbox);
+            
             }
 
+        public void ClickonCreateAccountButton()
+            {
+          ApplicationContext.Tap(CreateAccButton);
+
+           }
         internal void ClickOn_Alert_OK()
             { 
             ApplicationContext.Tap(SnakbarOk);
