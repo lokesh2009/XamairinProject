@@ -106,6 +106,41 @@ namespace CrossplatformApp
             }
 
 
+        
+        [Test]
+        public void CreateAccount_PasswordNotProvidedandClickonCreateAccount()
+            { 
+           Currentpage = new LandingPage ();
+           Currentpage.As<LandingPage>().Clickon_CreateAccountLink();
+           Currentpage = new CreateAccountPage();
+           //Currentpage.As<CreateAccountPage>().ClickNext("lokesh","sharma","lsharma@xtivia.com","8447520166");
+           //Currentpage.As<CreateAccountPage>().CompleteCreateAccount("Gemini@12","Gemini@12");
+           ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","RegistrationData");
+           Currentpage.As<CreateAccountPage>().RegistrationFpage(ExcelUtil.ReadData(7,"Firstname"),ExcelUtil.ReadData(7,"Lastname"),ExcelUtil.ReadData(7,"Email"),ExcelUtil.ReadData(7,"Contact"));
+           Currentpage.As<CreateAccountPage>().RegistrationSecondpage(ExcelUtil.ReadData(7,"Password"),ExcelUtil.ReadData(7,"ConfirmPassword"));
+           Currentpage.As<CreateAccountPage>().ClickonIAgreeCheckbox();
+           Currentpage.As<CreateAccountPage>().ClickonCreateAccountButton();
+           Assert.AreEqual("Please enter valid password",ApplicationContext.Query(Currentpage.As<CreateAccountPage>().Snakbar_PasswordnotfoundinCreateacc).First().Text);
+            }
+
+        [Test]
+        public void CreateAccount_IfEmailIdAlreadyexistAndUserTrytoCreateAccount()
+            { 
+           Currentpage = new LandingPage ();
+           Currentpage.As<LandingPage>().Clickon_CreateAccountLink();
+           Currentpage = new CreateAccountPage();
+           //Currentpage.As<CreateAccountPage>().ClickNext("lokesh","sharma","lsharma@xtivia.com","8447520166");
+           //Currentpage.As<CreateAccountPage>().CompleteCreateAccount("Gemini@12","Gemini@12");
+           ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","RegistrationData");
+           Currentpage.As<CreateAccountPage>().RegistrationFpage(ExcelUtil.ReadData(7,"Firstname"),ExcelUtil.ReadData(7,"Lastname"),ExcelUtil.ReadData(7,"Email"),ExcelUtil.ReadData(7,"Contact"));
+           Currentpage.As<CreateAccountPage>().RegistrationSecondpage(ExcelUtil.ReadData(7,"Password"),ExcelUtil.ReadData(7,"ConfirmPassword"));
+           Currentpage.As<CreateAccountPage>().ClickonIAgreeCheckbox();
+           Currentpage.As<CreateAccountPage>().ClickonCreateAccountButton();
+           Assert.AreEqual("Confirm Password does not match Password",ApplicationContext.Query(Currentpage.As<CreateAccountPage>().Snakbar_PasswordNotmatched).First().Text);
+            
+            
+            }
+
 
                      [Test]
 
@@ -271,15 +306,14 @@ namespace CrossplatformApp
             Currentpage = new CreateAccountPage();
             app.Repl();
             */
-
-           Currentpage = new LandingPage ();
+                       Currentpage = new LandingPage ();
            Currentpage.As<LandingPage>().Clickon_CreateAccountLink();
            Currentpage = new CreateAccountPage();
            //Currentpage.As<CreateAccountPage>().ClickNext("lokesh","sharma","lsharma@xtivia.com","8447520166");
            //Currentpage.As<CreateAccountPage>().CompleteCreateAccount("Gemini@12","Gemini@12");
            ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","RegistrationData");
-           Currentpage.As<CreateAccountPage>().RegistrationFpage(ExcelUtil.ReadData(6,"Firstname"),ExcelUtil.ReadData(6,"Lastname"),ExcelUtil.ReadData(6,"Email"),ExcelUtil.ReadData(6,"Contact"));
-           Currentpage.As<CreateAccountPage>().RegistrationSecondpage(ExcelUtil.ReadData(6,"Password"),ExcelUtil.ReadData(6,"ConfirmPassword"));
+           Currentpage.As<CreateAccountPage>().RegistrationFpage(ExcelUtil.ReadData(7,"Firstname"),ExcelUtil.ReadData(7,"Lastname"),ExcelUtil.ReadData(7,"Email"),ExcelUtil.ReadData(7,"Contact"));
+           Currentpage.As<CreateAccountPage>().RegistrationSecondpage(ExcelUtil.ReadData(7,"Password"),ExcelUtil.ReadData(7,"ConfirmPassword"));
            Currentpage.As<CreateAccountPage>().ClickonIAgreeCheckbox();
            app.Repl();
 
