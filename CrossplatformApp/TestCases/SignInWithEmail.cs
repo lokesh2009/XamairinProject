@@ -68,6 +68,7 @@ namespace CrossplatformApp
                        [Test]
            public void CreateAccount_With_ValidData()
             { 
+
            Currentpage = new LandingPage ();
            Currentpage.As<LandingPage>().Clickon_CreateAccountLink();
            Currentpage = new CreateAccountPage();
@@ -77,13 +78,32 @@ namespace CrossplatformApp
            Currentpage.As<CreateAccountPage>().RegistrationFpage(ExcelUtil.ReadData(1,"Firstname"),ExcelUtil.ReadData(1,"Lastname"),ExcelUtil.ReadData(1,"Email"),ExcelUtil.ReadData(1,"Contact"));
            Currentpage.As<CreateAccountPage>().RegistrationSecondpage(ExcelUtil.ReadData(1,"Password"),ExcelUtil.ReadData(1,"ConfirmPassword"));
            Currentpage.As<CreateAccountPage>().ClickonIAgreeCheckbox();
-           //Currentpage.As<CreateAccountPage>().ClickonCreateAccountButton();
+           
+            // Below line of code click on Create account CTA
+            Currentpage.As<CreateAccountPage>().ClickonCreateAccountButton();
 
 
            // Assert.AreEqual("All fields in this form are required",ApplicationContext.Query(Currentpage.As<CreateAccountPage>().UsernotprovideanydataandclickonNext).First().Text);
           // Currentpage.As<CreateAccountPage>().ClickOn_Alert_OK();
             }
 
+        [Test]
+        public void CreateAccount_UserPaswwordNotMatchedVerification()
+            { 
+           Currentpage = new LandingPage ();
+           Currentpage.As<LandingPage>().Clickon_CreateAccountLink();
+           Currentpage = new CreateAccountPage();
+           //Currentpage.As<CreateAccountPage>().ClickNext("lokesh","sharma","lsharma@xtivia.com","8447520166");
+           //Currentpage.As<CreateAccountPage>().CompleteCreateAccount("Gemini@12","Gemini@12");
+           ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","RegistrationData");
+           Currentpage.As<CreateAccountPage>().RegistrationFpage(ExcelUtil.ReadData(6,"Firstname"),ExcelUtil.ReadData(6,"Lastname"),ExcelUtil.ReadData(6,"Email"),ExcelUtil.ReadData(6,"Contact"));
+           Currentpage.As<CreateAccountPage>().RegistrationSecondpage(ExcelUtil.ReadData(6,"Password"),ExcelUtil.ReadData(6,"ConfirmPassword"));
+           Currentpage.As<CreateAccountPage>().ClickonIAgreeCheckbox();
+           Currentpage.As<CreateAccountPage>().ClickonCreateAccountButton();
+           Assert.AreEqual("Confirm Password does not match Password",ApplicationContext.Query(Currentpage.As<CreateAccountPage>().Snakbar_PasswordNotmatched).First().Text);
+            
+            
+            }
 
 
 
@@ -252,21 +272,16 @@ namespace CrossplatformApp
             app.Repl();
             */
 
-
-            Currentpage = new LandingPage ();
-            Currentpage.As<LandingPage>().Clickon_CreateAccountLink();
-            Currentpage = new CreateAccountPage();
-                       
-app.Tap(x=>x.Id("NoResourceEntry-60"));
-app.EnterText(x=>x.Id("NoResourceEntry-60"),"Lokesh");
-app.Tap(x=>x.Id("NoResourceEntry-62"));
-app.Tap(x=>x.Id("NoResourceEntry-62"));
-app.EnterText(x=>x.Id("NoResourceEntry-62"),"Sharma");
-app.DismissKeyboard();
-app.Tap(x=>x.Id("NoResourceEntry-64"));
-app.Tap(x=>x.Id("NoResourceEntry-64"));
-app.EnterText(x=>x.Id("NoResourceEntry-64"),"8666870987");
-   app.Repl();
+           Currentpage = new LandingPage ();
+           Currentpage.As<LandingPage>().Clickon_CreateAccountLink();
+           Currentpage = new CreateAccountPage();
+           //Currentpage.As<CreateAccountPage>().ClickNext("lokesh","sharma","lsharma@xtivia.com","8447520166");
+           //Currentpage.As<CreateAccountPage>().CompleteCreateAccount("Gemini@12","Gemini@12");
+           ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","RegistrationData");
+           Currentpage.As<CreateAccountPage>().RegistrationFpage(ExcelUtil.ReadData(6,"Firstname"),ExcelUtil.ReadData(6,"Lastname"),ExcelUtil.ReadData(6,"Email"),ExcelUtil.ReadData(6,"Contact"));
+           Currentpage.As<CreateAccountPage>().RegistrationSecondpage(ExcelUtil.ReadData(6,"Password"),ExcelUtil.ReadData(6,"ConfirmPassword"));
+           Currentpage.As<CreateAccountPage>().ClickonIAgreeCheckbox();
+           app.Repl();
 
       
             

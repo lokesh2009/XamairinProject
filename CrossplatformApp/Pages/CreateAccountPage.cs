@@ -24,7 +24,7 @@ namespace CrossplatformApp.Pages
         public Query Next => x => x.Text("Next");
         public Query SnakbarOk => x => x.Id("snackbar_action");
         public Query UsernotprovideanydataandclickonNext => x =>x.Text("All fields in this form are required");
-
+        public Query Snakbar_PasswordNotmatched => x =>x.Text("Confirm Password does not match Password");
 
         // Create Account second page locaters
 
