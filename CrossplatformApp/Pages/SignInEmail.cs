@@ -53,11 +53,11 @@ namespace CrossplatformApp.Pages
         public Query BlankSignInMessage => x => x.Text("Username and password can't be blank");
         public Query SnakbarOk => x => x.Id("snackbar_action");
         public Query InvalidUseridandPwdMessage => x =>x.Text("Invalid email or password, please check your information and try again.");
-
+        public  Query Snackbar_InvalidUsercredentialsErrorMessage =>x =>x.Text("Invalid email or password, please check your information and try again.");
         
 
         //*****************Alert is getting depriciated******************
-         public Query ErrorMessage_InvalidUsername_Password => x => x.Text("Username and password can't be blank");
+          public Query ErrorMessage_InvalidUsername_Password => x => x.Text("Username and password can't be blank");
          public Query ClickOK_Alert => x=> x.Text("OK");
 
 

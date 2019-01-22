@@ -26,6 +26,7 @@ namespace CrossplatformApp.Pages
         public Query UsernotprovideanydataandclickonNext => x =>x.Text("All fields in this form are required");
         public Query Snakbar_PasswordNotmatched => x =>x.Text("Confirm Password does not match Password");
         public Query Snakbar_PasswordnotfoundinCreateacc => x=>x.Text("Please enter valid password");
+        public Query Snakbar_UseremailAlreadyExist = x=>x.Text("An account already exists with this email address. Please login (101)");
         // Create Account second page locaters
 
         public Query Password => x => x.Id("NoResourceEntry-99");
@@ -153,7 +154,7 @@ namespace CrossplatformApp.Pages
             WestBendExtensionMethods.TapandEnterText(PhoneNo,contact);
            
             ApplicationContext.Tap(Next);
-            ApplicationContext.Tap(Next);
+           // ApplicationContext.Tap(Next);
 
             } 
 

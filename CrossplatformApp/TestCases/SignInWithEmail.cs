@@ -46,7 +46,9 @@ namespace CrossplatformApp
             Currentpage = new SignInEmail();
             ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","LoginData");          
             Currentpage.As<SignInEmail>().SignIn(ExcelUtil.ReadData(2,"Userid"),ExcelUtil.ReadData(2,"Password")); 
-            
+            Assert.AreEqual("Invalid email or password, please check your information and try again.",ApplicationContext.Query(Currentpage.As<SignInEmail>().Snackbar_InvalidUsercredentialsErrorMessage).First().Text);
+            Currentpage.As<SignInEmail>().ClickOn_Alert_OK();
+
             }
 
                  
@@ -61,7 +63,7 @@ namespace CrossplatformApp
            //Currentpage.As<CreateAccountPage>().CompleteCreateAccount("Gemini@12","Gemini@12");
            ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","RegistrationData");
            Currentpage.As<CreateAccountPage>().RegistrationFpage(ExcelUtil.ReadData(2,"Firstname"),ExcelUtil.ReadData(2,"Lastname"),ExcelUtil.ReadData(2,"Email"),ExcelUtil.ReadData(2,"Contact"));
-         //  Assert.AreEqual("All fields in this form are required",ApplicationContext.Query(Currentpage.As<CreateAccountPage>().UsernotprovideanydataandclickonNext).First().Text);
+           Assert.AreEqual("All fields in this form are required",ApplicationContext.Query(Currentpage.As<CreateAccountPage>().UsernotprovideanydataandclickonNext).First().Text);
          //  Currentpage.As<CreateAccountPage>().ClickOn_Alert_OK();
            
             }
@@ -117,7 +119,7 @@ namespace CrossplatformApp
            //Currentpage.As<CreateAccountPage>().CompleteCreateAccount("Gemini@12","Gemini@12");
            ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","RegistrationData");
            Currentpage.As<CreateAccountPage>().RegistrationFpage(ExcelUtil.ReadData(7,"Firstname"),ExcelUtil.ReadData(7,"Lastname"),ExcelUtil.ReadData(7,"Email"),ExcelUtil.ReadData(7,"Contact"));
-           Currentpage.As<CreateAccountPage>().RegistrationSecondpage(ExcelUtil.ReadData(7,"Password"),ExcelUtil.ReadData(7,"ConfirmPassword"));
+           //Currentpage.As<CreateAccountPage>().RegistrationSecondpage(ExcelUtil.ReadData(7,"Password"),ExcelUtil.ReadData(7,"ConfirmPassword"));
            Currentpage.As<CreateAccountPage>().ClickonIAgreeCheckbox();
            Currentpage.As<CreateAccountPage>().ClickonCreateAccountButton();
            Assert.AreEqual("Please enter valid password",ApplicationContext.Query(Currentpage.As<CreateAccountPage>().Snakbar_PasswordnotfoundinCreateacc).First().Text);
@@ -129,15 +131,16 @@ namespace CrossplatformApp
            Currentpage = new LandingPage ();
            Currentpage.As<LandingPage>().Clickon_CreateAccountLink();
            Currentpage = new CreateAccountPage();
-           //Currentpage.As<CreateAccountPage>().ClickNext("lokesh","sharma","lsharma@xtivia.com","8447520166");
-           //Currentpage.As<CreateAccountPage>().CompleteCreateAccount("Gemini@12","Gemini@12");
+             
            ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","RegistrationData");
-           Currentpage.As<CreateAccountPage>().RegistrationFpage(ExcelUtil.ReadData(7,"Firstname"),ExcelUtil.ReadData(7,"Lastname"),ExcelUtil.ReadData(7,"Email"),ExcelUtil.ReadData(7,"Contact"));
-           Currentpage.As<CreateAccountPage>().RegistrationSecondpage(ExcelUtil.ReadData(7,"Password"),ExcelUtil.ReadData(7,"ConfirmPassword"));
+           Currentpage.As<CreateAccountPage>().RegistrationFpage(ExcelUtil.ReadData(8,"Firstname"),ExcelUtil.ReadData(8,"Lastname"),ExcelUtil.ReadData(8,"Email"),ExcelUtil.ReadData(8,"Contact"));
+           Currentpage.As<CreateAccountPage>().RegistrationSecondpage(ExcelUtil.ReadData(8,"Password"),ExcelUtil.ReadData(8,"ConfirmPassword"));
            Currentpage.As<CreateAccountPage>().ClickonIAgreeCheckbox();
+
            Currentpage.As<CreateAccountPage>().ClickonCreateAccountButton();
-           Assert.AreEqual("Confirm Password does not match Password",ApplicationContext.Query(Currentpage.As<CreateAccountPage>().Snakbar_PasswordNotmatched).First().Text);
-            
+          ApplicationContext.WaitForElement(Currentpage.As<CreateAccountPage>().Snakbar_UseremailAlreadyExist);
+            Assert.AreEqual("An account already exists with this email address. Please login (101)",ApplicationContext.Query(Currentpage.As<CreateAccountPage>().Snakbar_UseremailAlreadyExist).First().Text);
+            Currentpage.As<CreateAccountPage>().ClickOn_Alert_OK();     
             
             }
 
@@ -306,7 +309,11 @@ namespace CrossplatformApp
             Currentpage = new CreateAccountPage();
             app.Repl();
             */
-                       Currentpage = new LandingPage ();
+           
+        app.Repl();
+            
+            /*
+            Currentpage = new LandingPage ();
            Currentpage.As<LandingPage>().Clickon_CreateAccountLink();
            Currentpage = new CreateAccountPage();
            //Currentpage.As<CreateAccountPage>().ClickNext("lokesh","sharma","lsharma@xtivia.com","8447520166");
@@ -317,7 +324,7 @@ namespace CrossplatformApp
            Currentpage.As<CreateAccountPage>().ClickonIAgreeCheckbox();
            app.Repl();
 
-      
+      */
             
             }
         }

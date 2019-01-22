@@ -69,10 +69,14 @@ namespace CrossplatformApp.Utility
         /// Populate the data in collection
         /// </summary>
         /// <param name="fileName"></param>
+        /// 
+
         public static void PopulateInCollection(string fileName, string sheetname)
         {
-            DataTable table = ExcelToDataTable(fileName,sheetname);
-
+            if(dataCol.Count==0)
+                {
+            
+                DataTable table = ExcelToDataTable(fileName,sheetname);
             //Iterate through the rows and columns of the Table
             for (int row = 1; row <= table.Rows.Count; row++)
             {
@@ -89,6 +93,9 @@ namespace CrossplatformApp.Utility
                 }
             }
         }
+                
+                }
+            
 
         /// <summary>
         /// Read data from Collection
@@ -113,7 +120,11 @@ namespace CrossplatformApp.Utility
                 Console.WriteLine(e.Message);
                 return null;
             }
+
+            
         }
+
+
 
     }
 
