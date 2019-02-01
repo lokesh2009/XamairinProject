@@ -29,13 +29,25 @@ namespace CrossplatformApp
 		public void BeforeEachTest()
 		{
         
-      
             ApplicationContext = AppInitializer.StartApp(platform);
+            Thread.Sleep(6000);
             app = ApplicationContext;
 
             //app = AppManager.StartApp();
 		}
         
+        [Test]
+        public void VerifyApp_version()
+            { 
+            
+            Currentpage = new LandingPage();
+            Currentpage.As<LandingPage>().ClickOn_SignINwithEmailidLink();
+            Currentpage = new SignInEmail();
+            ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","LoginData");
+            Currentpage.As<SignInEmail>().SignIn(ExcelUtil.ReadData(2,"Userid"),ExcelUtil.ReadData(2,"Password")); 
+            
+            
+            }
 
         [Test]
         public void VerifyInvalidSignIn()
@@ -130,15 +142,14 @@ namespace CrossplatformApp
             { 
            Currentpage = new LandingPage ();
            Currentpage.As<LandingPage>().Clickon_CreateAccountLink();
-           Currentpage = new CreateAccountPage();
-             
+           Currentpage = new CreateAccountPage();  
            ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","RegistrationData");
            Currentpage.As<CreateAccountPage>().RegistrationFpage(ExcelUtil.ReadData(8,"Firstname"),ExcelUtil.ReadData(8,"Lastname"),ExcelUtil.ReadData(8,"Email"),ExcelUtil.ReadData(8,"Contact"));
            Currentpage.As<CreateAccountPage>().RegistrationSecondpage(ExcelUtil.ReadData(8,"Password"),ExcelUtil.ReadData(8,"ConfirmPassword"));
            Currentpage.As<CreateAccountPage>().ClickonIAgreeCheckbox();
 
            Currentpage.As<CreateAccountPage>().ClickonCreateAccountButton();
-          ApplicationContext.WaitForElement(Currentpage.As<CreateAccountPage>().Snakbar_UseremailAlreadyExist);
+           ApplicationContext.WaitForElement(Currentpage.As<CreateAccountPage>().Snakbar_UseremailAlreadyExist);
             Assert.AreEqual("An account already exists with this email address. Please login (101)",ApplicationContext.Query(Currentpage.As<CreateAccountPage>().Snakbar_UseremailAlreadyExist).First().Text);
             Currentpage.As<CreateAccountPage>().ClickOn_Alert_OK();     
             
@@ -303,14 +314,22 @@ namespace CrossplatformApp
         [Test]
         public void WIP()
             { 
-            /*
+            
             Currentpage = new LandingPage ();
-            Currentpage.As<LandingPage>().Clickon_CreateAccountLink();
-            Currentpage = new CreateAccountPage();
-            app.Repl();
-            */
+            Currentpage.As<LandingPage>().ClickOn_SignINwithEmailidLink();
+            Currentpage = new SignInEmail();
+            ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","LoginData");          
+            Currentpage.As<SignInEmail>().SignIn(ExcelUtil.ReadData(3,"Userid"),ExcelUtil.ReadData(3,"Password"));
+            Currentpage = new UserLoggedInPage ();
+            ApplicationContext.WaitForElement(Currentpage.As<UserLoggedInPage>().Snakbar_Successfullmessage); 
+            Thread.Sleep(6000);
+            ApplicationContext.WaitForElement(Currentpage.As<UserLoggedInPage>().AllPolicy);
+           // app.Repl();
+           Currentpage.As<UserLoggedInPage>().ClickMenuBarTap();
+          
+         
            
-        app.Repl();
+        //app.Repl();
             
             /*
             Currentpage = new LandingPage ();

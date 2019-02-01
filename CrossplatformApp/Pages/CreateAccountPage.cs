@@ -17,11 +17,14 @@ namespace CrossplatformApp.Pages
     {
         
         public Query CreateAccount = x => x.Text("Create Account");
-        public Query FirstName = x => x.Id("NoResourceEntry-60");
-        public Query LastName = x => x.Id("NoResourceEntry-62");
-        public Query Emailid = x => x.Id("NoResourceEntry-63");
-        public Query PhoneNo = x => x.Id("NoResourceEntry-64");
-        public Query Next => x => x.Text("Next");
+        public Query FirstName = x => x.Id("NoResourceEntry-58");
+        public Query LastName = x => x.Id("NoResourceEntry-59");
+        public Query Emailid = x => x.Id("NoResourceEntry-92");
+        public Query PhoneNo = x => x.Id("NoResourceEntry-62");
+        
+        public Query Next => x => x.Property("contentDescription").Contains("NEXT_BUTTON");
+        
+
         public Query SnakbarOk => x => x.Id("snackbar_action");
         public Query UsernotprovideanydataandclickonNext => x =>x.Text("All fields in this form are required");
         public Query Snakbar_PasswordNotmatched => x =>x.Text("Confirm Password does not match Password");
@@ -29,10 +32,10 @@ namespace CrossplatformApp.Pages
         public Query Snakbar_UseremailAlreadyExist = x=>x.Text("An account already exists with this email address. Please login (101)");
         // Create Account second page locaters
 
-        public Query Password => x => x.Id("NoResourceEntry-99");
-        public Query ConfirmPassword => x => x.Id("NoResourceEntry-106");
-        public Query IagreeCheckbox => x => x.Id("NoResourceEntry-129");
-        public Query CreateAccButton => x => x.Id("NoResourceEntry-145");
+        public Query Password => x => x.Id("NoResourceEntry-102");
+        public Query ConfirmPassword => x => x.Id("NoResourceEntry-108");
+        public Query IagreeCheckbox => x => x.Id("NoResourceEntry-132");
+        public Query CreateAccButton => x => x.Id("NoResourceEntry-147");
 
         //***************************************************************************
 
@@ -73,13 +76,13 @@ namespace CrossplatformApp.Pages
             Next.Click();
             
 
-            /*
+            
             ApplicationContext.EnterText(FirstName,FName);
             
             ApplicationContext.DismissKeyboard();
             ApplicationContext.Tap(LastName);
            
-              */
+              
 
             //Provide Entry in Last name
             ApplicationContext.EnterText(LastName, Lname);
@@ -131,7 +134,7 @@ namespace CrossplatformApp.Pages
             internal void Registrationwithoutdata()
         { 
         
-            ApplicationContext.Tap(Next);
+           // ApplicationContext.Tap(Next);
             ApplicationContext.Tap(Next);
 
         }
@@ -154,7 +157,7 @@ namespace CrossplatformApp.Pages
             WestBendExtensionMethods.TapandEnterText(PhoneNo,contact);
            
             ApplicationContext.Tap(Next);
-           // ApplicationContext.Tap(Next);
+           //ApplicationContext.Tap(Next);
 
             } 
 

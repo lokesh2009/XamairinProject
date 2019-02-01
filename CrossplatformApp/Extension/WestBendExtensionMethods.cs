@@ -13,6 +13,11 @@ namespace CrossplatformApp.Extension
 {
     public static class WestBendExtensionMethods
     {
+        public static void ScrollDownElement(this Query element)
+            { 
+            
+            Base.Basepage.ApplicationContext.ScrollDown();
+            }
 
         public static void EnterText(this Query element, string text)
             { 
@@ -61,8 +66,8 @@ namespace CrossplatformApp.Extension
 
         public static void TapandEnterText(this Query element, string text)
             { 
-                          Thread.Sleep(2000);
-            Base.Basepage.ApplicationContext.Tap(element);
+            Thread.Sleep(2000);
+            //Base.Basepage.ApplicationContext.Tap(element);
             Base.Basepage.ApplicationContext.EnterText(text);
             Base.Basepage.ApplicationContext.DismissKeyboard();
 
@@ -76,5 +81,7 @@ namespace CrossplatformApp.Extension
         {
             throw new NotImplementedException();
         }
+
+        
     }
 }

@@ -73,8 +73,9 @@ namespace CrossplatformApp.Utility
 
         public static void PopulateInCollection(string fileName, string sheetname)
         {
-            if(dataCol.Count==0)
-                {
+            dataCol.Clear();
+          //  if(dataCol.Count==0)
+            //    {
             
                 DataTable table = ExcelToDataTable(fileName,sheetname);
             //Iterate through the rows and columns of the Table
@@ -94,7 +95,7 @@ namespace CrossplatformApp.Utility
             }
         }
                 
-                }
+              //  }
             
 
         /// <summary>
@@ -107,6 +108,8 @@ namespace CrossplatformApp.Utility
         {
             try
             {
+                
+
                 //Retriving Data using LINQ to reduce much of iterations
                 string data = (from colData in dataCol
                                where colData.colName == columnName && colData.rowNumber == rowNumber

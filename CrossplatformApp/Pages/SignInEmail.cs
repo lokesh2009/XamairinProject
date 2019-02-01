@@ -48,6 +48,7 @@ namespace CrossplatformApp.Pages
         public Query EnterEmailid => x => x.Id("NoResourceEntry-57");
         public Query Enterpassword => x => x.Id("NoResourceEntry-62");
         public Query SignInButton => x => x.Text("SIGN IN");
+
         public Query Rememberme => x => x.Text("Remember Me");
         public Query ForgotPassword => x=> x.Text("Forgot password?");
         public Query BlankSignInMessage => x => x.Text("Username and password can't be blank");
@@ -57,7 +58,7 @@ namespace CrossplatformApp.Pages
         
 
         //*****************Alert is getting depriciated******************
-          public Query ErrorMessage_InvalidUsername_Password => x => x.Text("Username and password can't be blank");
+         public Query ErrorMessage_InvalidUsername_Password => x => x.Text("Username and password can't be blank");
          public Query ClickOK_Alert => x=> x.Text("OK");
 
 
@@ -105,7 +106,7 @@ namespace CrossplatformApp.Pages
         internal void SignInWithoutprovidinganyUsernameAndPassword()
             { 
             
-            ApplicationContext.Tap(SignInButton); 
+            ApplicationContext.Tap(SignInButton);
             ApplicationContext.WaitForElement(ErrorMessage_InvalidUsername_Password);
        
             }
