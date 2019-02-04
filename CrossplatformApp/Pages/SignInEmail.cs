@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Queries.AppQuery>;
 
@@ -14,32 +15,7 @@ namespace CrossplatformApp.Pages
 {
     class SignInEmail: Basepage
     {
-        /* 
-            app.Tap(x=>x.Text("Sign in with email"));
-            app.EnterText(x=>x.Id("NoResourceEntry-62"),"testuser4@mailinator.com");
-            app.DismissKeyboard();
-            app.Tap(x=>x.Id("NoResourceEntry-66"));
-            app.EnterText(x=>x.Id("NoResourceEntry-66"),"Aa@12345");
-            app.DismissKeyboard();
-            app.Tap(x=>x.Text("SIGN IN"));;
-            app.Tap(x=>x.Id("NoResourceEntry-243"));
-            
-            app.Tap(x=>x.Text("View Policy"));
-            app.Tap(x=>x.Id("NoResourceEntry-293"));
-            
-            app.SetOrientationPortrait();
-            app.Back();
-            app.Tap(x=>x.Id("NoResourceEntry-275"));
-            app.SetOrientationPortrait();
-            app.Back();
-            app.Tap(x=>x.Id("NoResourceEntry-275"));
-            app.SetOrientationPortrait();
-            app.Back();
-            app.ScrollDown();
-            
-         
-         */
-
+     
         // Verify Sign in with valid user id and password
               
       //  public Query ClickonSignIn => x => x.Property("contentDescription").Contains("ButtonText");
@@ -75,7 +51,7 @@ namespace CrossplatformApp.Pages
 
         internal void ClickonSignInLink()
             { 
-            
+            Thread.Sleep(10*1000);
             ApplicationContext.Tap(ClickonSignIn);
 
             }
@@ -86,17 +62,20 @@ namespace CrossplatformApp.Pages
             
            
             ApplicationContext.Tap(EnterEmailid);
+            Thread.Sleep(10*1000);
             ApplicationContext.EnterText(EnterEmailid,Username);
             
             ApplicationContext.DismissKeyboard();
                         
             ApplicationContext.Tap(Enterpassword);
+            Thread.Sleep(10*1000);
             ApplicationContext.EnterText(Enterpassword,pass);
            
             ApplicationContext.DismissKeyboard();
+            Thread.Sleep(10*1000);
             ApplicationContext.Tap(SignInButton);
             
-            ApplicationContext.Tap(SignInButton);
+            //ApplicationContext.Tap(SignInButton);
  
  
             }
@@ -113,6 +92,7 @@ namespace CrossplatformApp.Pages
 
         internal void ClickOn_Alert_OK()
             { 
+            Thread.Sleep(10*1000);
             ApplicationContext.Tap(SnakbarOk);
 
             }

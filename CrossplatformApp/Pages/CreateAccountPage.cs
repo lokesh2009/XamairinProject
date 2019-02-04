@@ -19,7 +19,7 @@ namespace CrossplatformApp.Pages
         public Query CreateAccount = x => x.Text("Create Account");
         public Query FirstName = x => x.Id("NoResourceEntry-58");
         public Query LastName = x => x.Id("NoResourceEntry-59");
-        public Query Emailid = x => x.Id("NoResourceEntry-92");
+        public Query Emailid = x => x.Id("NoResourceEntry-60");
         public Query PhoneNo = x => x.Id("NoResourceEntry-62");
         
         public Query Next => x => x.Property("contentDescription").Contains("NEXT_BUTTON");
@@ -37,7 +37,6 @@ namespace CrossplatformApp.Pages
         public Query IagreeCheckbox => x => x.Id("NoResourceEntry-132");
         public Query CreateAccButton => x => x.Id("NoResourceEntry-147");
 
-        //***************************************************************************
 
         //*************************Click on Create Account link***********************
         /*
@@ -134,8 +133,8 @@ namespace CrossplatformApp.Pages
             internal void Registrationwithoutdata()
         { 
         
-           // ApplicationContext.Tap(Next);
-            ApplicationContext.Tap(Next);
+              Thread.Sleep(10*1000);
+              ApplicationContext.Tap(Next);
 
         }
             
@@ -143,15 +142,19 @@ namespace CrossplatformApp.Pages
             internal void RegistrationFpage(string Fname, string Lname,string Email, string contact )
             { 
            
+            Thread.Sleep(10*1000);
             ApplicationContext.Tap(FirstName);
             WestBendExtensionMethods.TapandEnterText(FirstName,Fname);
             
+            Thread.Sleep(10*1000);
             ApplicationContext.Tap(LastName);
             WestBendExtensionMethods.TapandEnterText(LastName,Lname);
             
+            Thread.Sleep(10*1000);
             ApplicationContext.Tap(Emailid);
             WestBendExtensionMethods.TapandEnterText(Emailid,Email);
             
+            Thread.Sleep(10*1000);
             ApplicationContext.Tap(PhoneNo);
             // String contact need to convert in Double
             WestBendExtensionMethods.TapandEnterText(PhoneNo,contact);
@@ -173,25 +176,31 @@ namespace CrossplatformApp.Pages
             WestBendExtensionMethods.TapandEnterText(LastName,Lname);
 
             */
+            Thread.Sleep(10*1000);
             ApplicationContext.Tap(Password);
             WestBendExtensionMethods.TapandEnterText(Password,password);
+
+            Thread.Sleep(10*1000);
             ApplicationContext.Tap(ConfirmPassword);
             WestBendExtensionMethods.TapandEnterText(ConfirmPassword,confirmpassword);
           
             }
         public void ClickonIAgreeCheckbox()
             { 
+            Thread.Sleep(10*1000);
             ApplicationContext.Tap(IagreeCheckbox);
             
             }
 
         public void ClickonCreateAccountButton()
             {
+            Thread.Sleep(10*1000);
           ApplicationContext.Tap(CreateAccButton);
 
            }
         internal void ClickOn_Alert_OK()
             { 
+            Thread.Sleep(10*1000);
             ApplicationContext.Tap(SnakbarOk);
 
             }

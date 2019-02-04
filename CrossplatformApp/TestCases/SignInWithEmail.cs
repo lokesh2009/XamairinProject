@@ -158,19 +158,14 @@ namespace CrossplatformApp
 
                      [Test]
 
-                public void CreateAccount_With_BlankData()
+           public void CreateAccount_With_BlankData()
             { 
            Currentpage = new LandingPage ();
            Currentpage.As<LandingPage>().Clickon_CreateAccountLink();
            Currentpage = new CreateAccountPage();
-           //Currentpage.As<CreateAccountPage>().ClickNext("lokesh","sharma","lsharma@xtivia.com","8447520166");
-           //Currentpage.As<CreateAccountPage>().CompleteCreateAccount("Gemini@12","Gemini@12");
-//           ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","RegistrationData");
            Currentpage.As<CreateAccountPage>().Registrationwithoutdata();
-                         Thread.Sleep(2000);
-
-            
-            Assert.AreEqual("All fields in this form are required",ApplicationContext.Query(Currentpage.As<CreateAccountPage>().UsernotprovideanydataandclickonNext).First().Text);
+           Thread.Sleep(2000); 
+           Assert.AreEqual("All fields in this form are required",ApplicationContext.Query(Currentpage.As<CreateAccountPage>().UsernotprovideanydataandclickonNext).First().Text);
            Currentpage.As<CreateAccountPage>().ClickOn_Alert_OK();
             }
 
@@ -300,6 +295,7 @@ namespace CrossplatformApp
         [Test]
         public void SignInWithValidUseridandPassword()
             { 
+
             //app.Repl();
             Currentpage = new LandingPage ();
             Currentpage.As<LandingPage>().ClickOn_SignINwithEmailidLink();
@@ -314,7 +310,7 @@ namespace CrossplatformApp
         [Test]
         public void WIP()
             { 
-            
+            /*
             Currentpage = new LandingPage ();
             Currentpage.As<LandingPage>().ClickOn_SignINwithEmailidLink();
             Currentpage = new SignInEmail();
@@ -324,9 +320,12 @@ namespace CrossplatformApp
             ApplicationContext.WaitForElement(Currentpage.As<UserLoggedInPage>().Snakbar_Successfullmessage); 
             Thread.Sleep(6000);
             ApplicationContext.WaitForElement(Currentpage.As<UserLoggedInPage>().AllPolicy);
-           // app.Repl();
-           Currentpage.As<UserLoggedInPage>().ClickMenuBarTap();
+            Currentpage.As<UserLoggedInPage>().ClickMenuBarTap();
+            Currentpage.As<UserLoggedInPage>().ClickOnAnyLink(UserLoggedInPage.MenuBar_AccountSetting);
+            */
           
+             app.Repl();
+           
          
            
         //app.Repl();

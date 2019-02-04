@@ -22,26 +22,41 @@ namespace CrossplatformApp.Pages
         public Query AccountSetting =>x=>x.Text("Account Settings");
         public Query Versionno => x=>x.Class("android.widget.TextView");
         
+        
+        //****************************Menu Bar Links **********************************
+        public static Query MenuBar_PolicySummary => x=>x.Text("Policy Summary");
+        public static Query MenuBar_Paybills => x=>x.Text("Pay Bills");
+        public static Query MenuBar_Submitaclaim => x=>x.Text("Submit a Claim");
+        public static Query MenuBar_PolicyDocument => x=>x.Text("Policy Documents");
+        public static Query MenuBar_VehicleIdcard => x=>x.Text("Vehicle ID Cards");
+        public static Query MenuBar_Contact => x=>x.Text("Contacts");
+        public static Query MenuBar_AccountSetting => x=>x.Text("Account Settings");
+        public static Query MenuBar_LinkPolicy => x=>x.Text("Link Policy");
+        public static Query MenuBar_Signout => x=>x.Text("Sign Out");
+        //***************************************************************************
+
+
+
         internal void ClickMenuBarTap()
             { 
-           
             ApplicationContext.Tap(MenuBar);
-
             }
 
         internal void WaitForAllPolicyLoad()
             { 
-
             ApplicationContext.WaitForElement(AllPolicy);
-            
             }
 
         internal void AccountSetting_Tap()
             { 
             ApplicationContext.Tap(AccountSetting);
-
             }
 
+        internal void ClickOnAnyLink(Query linkQuery)
+            { 
+            ApplicationContext.Tap(linkQuery);
+            
+            }
        
         
 }
