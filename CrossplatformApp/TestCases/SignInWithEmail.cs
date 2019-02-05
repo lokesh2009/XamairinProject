@@ -9,6 +9,8 @@ using CrossplatformWestBendApp;
 using System;
 using CrossplatformApp.Extension;
 using System.Threading;
+using AppResult = System.Func<Xamarin.UITest.Queries.AppResult,Xamarin.UITest.Queries.AppResult>;
+using Xamarin.UITest.Utils ; 
 
 namespace CrossplatformApp
 {
@@ -40,13 +42,20 @@ namespace CrossplatformApp
         public void VerifyApp_version()
             { 
             
-            Currentpage = new LandingPage();
+               
+            Currentpage = new LandingPage ();
             Currentpage.As<LandingPage>().ClickOn_SignINwithEmailidLink();
             Currentpage = new SignInEmail();
-            ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","LoginData");
-            Currentpage.As<SignInEmail>().SignIn(ExcelUtil.ReadData(2,"Userid"),ExcelUtil.ReadData(2,"Password")); 
-            
-            
+            ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","LoginData");          
+            Currentpage.As<SignInEmail>().SignIn(ExcelUtil.ReadData(3,"Userid"),ExcelUtil.ReadData(3,"Password"));
+            Currentpage = new UserLoggedInPage ();
+            ApplicationContext.WaitForElement(Currentpage.As<UserLoggedInPage>().Snakbar_Successfullmessage); 
+            Thread.Sleep(6000);
+            ApplicationContext.WaitForElement(Currentpage.As<UserLoggedInPage>().AllPolicy);
+            Currentpage.As<UserLoggedInPage>().ClickMenuBarTap();
+            Currentpage.As<UserLoggedInPage>().ClickOnAnyLink(UserLoggedInPage.MenuBar_AccountSetting);
+           // AppResult[] results = app.Query(x=>x.All());
+
             }
 
         [Test]
@@ -58,6 +67,7 @@ namespace CrossplatformApp
             Currentpage = new SignInEmail();
             ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","LoginData");          
             Currentpage.As<SignInEmail>().SignIn(ExcelUtil.ReadData(2,"Userid"),ExcelUtil.ReadData(2,"Password")); 
+            Thread.Sleep(10*1000);
             Assert.AreEqual("Invalid email or password, please check your information and try again.",ApplicationContext.Query(Currentpage.As<SignInEmail>().Snackbar_InvalidUsercredentialsErrorMessage).First().Text);
             Currentpage.As<SignInEmail>().ClickOn_Alert_OK();
 
@@ -308,9 +318,66 @@ namespace CrossplatformApp
             }
        
         [Test]
+        public void SubmitClaim_When_User_NotSelectedAnyPolicy()
+            { 
+            
+            Currentpage = new LandingPage ();
+            Currentpage.As<LandingPage>().ClickOn_SignINwithEmailidLink();
+            Currentpage = new SignInEmail();
+            ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","LoginData");          
+            Currentpage.As<SignInEmail>().SignIn(ExcelUtil.ReadData(3,"Userid"),ExcelUtil.ReadData(3,"Password"));
+            Currentpage = new UserLoggedInPage ();
+            ApplicationContext.WaitForElement(Currentpage.As<UserLoggedInPage>().Snakbar_Successfullmessage); 
+            Thread.Sleep(6000);
+            ApplicationContext.WaitForElement(Currentpage.As<UserLoggedInPage>().AllPolicy);
+            Currentpage.As<UserLoggedInPage>().ClickMenuBarTap();
+            //Currentpage.As<UserLoggedInPage>().ClickOnAnyLink(UserLoggedInPage.MenuBar_PolicySummary);
+            Currentpage.As<UserLoggedInPage>().ClickOnAnyLink(UserLoggedInPage.MenuBar_Submitaclaim);
+            Assert.AreEqual("No Policy has been selected",ApplicationContext.Query(Currentpage.As<UserLoggedInPage>().NoPolicySelected).First().Text);
+            
+          
+            
+            
+            }
+
+
+        [Test]
+        public void SubmitClaim_WhenUserSelectPolicySelected()
+            { 
+            
+            Currentpage = new LandingPage ();
+            Currentpage.As<LandingPage>().ClickOn_SignINwithEmailidLink();
+            Currentpage = new SignInEmail();
+            ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","LoginData");          
+            Currentpage.As<SignInEmail>().SignIn(ExcelUtil.ReadData(3,"Userid"),ExcelUtil.ReadData(3,"Password"));
+            Currentpage = new UserLoggedInPage ();
+            ApplicationContext.WaitForElement(Currentpage.As<UserLoggedInPage>().Snakbar_Successfullmessage); 
+            Thread.Sleep(6000);
+            ApplicationContext.WaitForElement(Currentpage.As<UserLoggedInPage>().AllPolicy);
+            Currentpage.As<UserLoggedInPage>().ClickMenuBarTap();
+            Currentpage.As<UserLoggedInPage>().ClickOnAnyLink(UserLoggedInPage.MenuBar_PolicySummary);
+           // WestBendExtensionMethods.ScrollDownElement(Currentpage.As<UserLoggedInPage>().FirstElementClick);
+            //app.ScrollDownTo(x=>x.All().Class("UITableViewSectionElement").Index(1));
+            Thread.Sleep(10*1000);
+            Currentpage.As<UserLoggedInPage>().TapOnFirstPolicy(Currentpage.As<UserLoggedInPage>().FirstElementClick);
+            ApplicationContext.WaitForElement(Currentpage.As<UserLoggedInPage>().PolicySummary);
+            Currentpage.As<UserLoggedInPage>().ClickMenuBarTap();
+            Currentpage.As<UserLoggedInPage>().ClickOnAnyLink(UserLoggedInPage.MenuBar_Submitaclaim);
+           
+           // Currentpage.As<UserLoggedInPage>();
+           
+            Currentpage.As<UserLoggedInPage>().ClickOnAnyLink(UserLoggedInPage.MenuBar_Submitaclaim);
+
+         
+            
+            
+            }
+
+        [Test]
         public void WIP()
             { 
             /*
+            
             Currentpage = new LandingPage ();
             Currentpage.As<LandingPage>().ClickOn_SignINwithEmailidLink();
             Currentpage = new SignInEmail();
@@ -322,9 +389,11 @@ namespace CrossplatformApp
             ApplicationContext.WaitForElement(Currentpage.As<UserLoggedInPage>().AllPolicy);
             Currentpage.As<UserLoggedInPage>().ClickMenuBarTap();
             Currentpage.As<UserLoggedInPage>().ClickOnAnyLink(UserLoggedInPage.MenuBar_AccountSetting);
+         
             */
-          
-             app.Repl();
+            //"NoResourceEntry-309", Policy Type
+
+          app.Repl();
            
          
            

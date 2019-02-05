@@ -43,6 +43,8 @@ D:\DUMMY\EAXamarinAPP\CrossplatformApp\obj\Debug\CrossplatformWestBendApp.csproj
 D:\DUMMY\EAXamarinAPP\CrossplatformApp\obj\Debug\CrossplatformWestBendApp.csproj.CopyComplete
 D:\DUMMY\EAXamarinAPP\CrossplatformApp\obj\Debug\CrossplatformApp.dll
 D:\DUMMY\EAXamarinAPP\CrossplatformApp\obj\Debug\CrossplatformApp.pdb
+D:\DUMMY\UI_Automation\Insured.App.UIAutomation\CrossplatformApp\obj\Debug\CrossplatformWestBendApp.csproj.ResolveComReference.cache
+D:\DUMMY\UI_Automation\Insured.App.UIAutomation\CrossplatformApp\obj\Debug\CrossplatformWestBendApp.csproj.CoreCompileInputs.cache
 D:\DUMMY\UI_Automation\Insured.App.UIAutomation\CrossplatformApp\bin\Debug\x86\e_sqlite3.dll
 D:\DUMMY\UI_Automation\Insured.App.UIAutomation\CrossplatformApp\bin\Debug\x64\e_sqlite3.dll
 D:\DUMMY\UI_Automation\Insured.App.UIAutomation\CrossplatformApp\bin\Debug\TestDataWestband.xlsx
@@ -84,8 +86,6 @@ D:\DUMMY\UI_Automation\Insured.App.UIAutomation\CrossplatformApp\bin\Debug\Syste
 D:\DUMMY\UI_Automation\Insured.App.UIAutomation\CrossplatformApp\bin\Debug\System.Security.Cryptography.X509Certificates.dll
 D:\DUMMY\UI_Automation\Insured.App.UIAutomation\CrossplatformApp\bin\Debug\Xamarin.UITest.dll
 D:\DUMMY\UI_Automation\Insured.App.UIAutomation\CrossplatformApp\bin\Debug\System.Threading.Tasks.Dataflow.dll
-D:\DUMMY\UI_Automation\Insured.App.UIAutomation\CrossplatformApp\obj\Debug\CrossplatformWestBendApp.csproj.ResolveComReference.cache
-D:\DUMMY\UI_Automation\Insured.App.UIAutomation\CrossplatformApp\obj\Debug\CrossplatformWestBendApp.csproj.CoreCompileInputs.cache
 D:\DUMMY\UI_Automation\Insured.App.UIAutomation\CrossplatformApp\obj\Debug\CrossplatformWestBendApp.csproj.CopyComplete
 D:\DUMMY\UI_Automation\Insured.App.UIAutomation\CrossplatformApp\obj\Debug\CrossplatformApp.dll
 D:\DUMMY\UI_Automation\Insured.App.UIAutomation\CrossplatformApp\obj\Debug\CrossplatformApp.pdb
