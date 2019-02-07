@@ -339,7 +339,31 @@ namespace CrossplatformApp
             
             
             }
-
+        [Test]
+        public void Vehicle_Claim_Submit()
+            { 
+            Currentpage = new LandingPage ();
+            Currentpage.As<LandingPage>().ClickOn_SignINwithEmailidLink();
+            Currentpage = new SignInEmail();
+            ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","LoginData");          
+            Currentpage.As<SignInEmail>().SignIn(ExcelUtil.ReadData(3,"Userid"),ExcelUtil.ReadData(3,"Password"));
+            Currentpage = new UserLoggedInPage ();
+            ApplicationContext.WaitForElement(Currentpage.As<UserLoggedInPage>().Snakbar_Successfullmessage); 
+            Thread.Sleep(6000);
+            ApplicationContext.WaitForElement(Currentpage.As<UserLoggedInPage>().AllPolicy);
+            Currentpage.As<UserLoggedInPage>().ClickMenuBarTap();
+            Currentpage.As<UserLoggedInPage>().ClickOnAnyLink(UserLoggedInPage.MenuBar_PolicySummary);
+             
+            Thread.Sleep(10*1000);
+            Currentpage.As<UserLoggedInPage>().TapOnFirstPolicy(Currentpage.As<UserLoggedInPage>().FirstElementClick);
+            ApplicationContext.WaitForElement(Currentpage.As<UserLoggedInPage>().PolicySummary);
+            Currentpage.As<UserLoggedInPage>().ClickMenuBarTap();
+            Currentpage.As<UserLoggedInPage>().ClickOnAnyLink(UserLoggedInPage.MenuBar_Submitaclaim);
+           // Currentpage.As<UserLoggedInPage>().ClickOnAnyLink(UserLoggedInPage.MenuBar_Submitaclaim);
+            Currentpage = new SubmitClaimPage();
+            Currentpage.As<SubmitClaimPage>().SubmitClaimLinks(Currentpage.As<SubmitClaimPage>().Vehicle);
+            app.Repl();
+            }
 
         [Test]
         public void SubmitClaim_WhenUserSelectPolicySelected()
@@ -367,10 +391,6 @@ namespace CrossplatformApp
            // Currentpage.As<UserLoggedInPage>();
            
             Currentpage.As<UserLoggedInPage>().ClickOnAnyLink(UserLoggedInPage.MenuBar_Submitaclaim);
-
-         
-            
-            
             }
 
         [Test]

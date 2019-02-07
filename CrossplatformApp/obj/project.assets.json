@@ -37,7 +37,7 @@
           "lib/net45/ExcelDataReader.DataSet.dll": {}
         }
       },
-      "Microsoft.AppCenter/1.9.0": {
+      "Microsoft.AppCenter/1.13.0": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "6.0.1",
@@ -50,10 +50,10 @@
           "lib/portable-net45+win8+wpa81+wp8/Microsoft.AppCenter.dll": {}
         }
       },
-      "Microsoft.AppCenter.Analytics/1.9.0": {
+      "Microsoft.AppCenter.Analytics/1.13.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "1.9.0"
+          "Microsoft.AppCenter": "1.13.0"
         },
         "compile": {
           "lib/portable-net45+win8+wpa81+wp8/Microsoft.AppCenter.Analytics.dll": {}
@@ -62,10 +62,10 @@
           "lib/portable-net45+win8+wpa81+wp8/Microsoft.AppCenter.Analytics.dll": {}
         }
       },
-      "Microsoft.AppCenter.Crashes/1.9.0": {
+      "Microsoft.AppCenter.Crashes/1.13.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "1.9.0"
+          "Microsoft.AppCenter": "1.13.0"
         },
         "compile": {
           "lib/portable-net45+win8+wpa81+wp8/Microsoft.AppCenter.Crashes.dll": {}
@@ -866,7 +866,7 @@
           "lib/net45/_._": {}
         }
       },
-      "Xamarin.UITest/2.2.6": {
+      "Xamarin.UITest/2.2.7": {
         "type": "package",
         "compile": {
           "lib/net45/Xamarin.UITest.dll": {}
@@ -912,7 +912,7 @@
           "lib/net45/ExcelDataReader.DataSet.dll": {}
         }
       },
-      "Microsoft.AppCenter/1.9.0": {
+      "Microsoft.AppCenter/1.13.0": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "6.0.1",
@@ -925,10 +925,10 @@
           "lib/portable-net45+win8+wpa81+wp8/Microsoft.AppCenter.dll": {}
         }
       },
-      "Microsoft.AppCenter.Analytics/1.9.0": {
+      "Microsoft.AppCenter.Analytics/1.13.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "1.9.0"
+          "Microsoft.AppCenter": "1.13.0"
         },
         "compile": {
           "lib/portable-net45+win8+wpa81+wp8/Microsoft.AppCenter.Analytics.dll": {}
@@ -937,10 +937,10 @@
           "lib/portable-net45+win8+wpa81+wp8/Microsoft.AppCenter.Analytics.dll": {}
         }
       },
-      "Microsoft.AppCenter.Crashes/1.9.0": {
+      "Microsoft.AppCenter.Crashes/1.13.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "1.9.0"
+          "Microsoft.AppCenter": "1.13.0"
         },
         "compile": {
           "lib/portable-net45+win8+wpa81+wp8/Microsoft.AppCenter.Crashes.dll": {}
@@ -1645,7 +1645,7 @@
           "lib/net45/_._": {}
         }
       },
-      "Xamarin.UITest/2.2.6": {
+      "Xamarin.UITest/2.2.7": {
         "type": "package",
         "compile": {
           "lib/net45/Xamarin.UITest.dll": {}
@@ -1691,7 +1691,7 @@
           "lib/net45/ExcelDataReader.DataSet.dll": {}
         }
       },
-      "Microsoft.AppCenter/1.9.0": {
+      "Microsoft.AppCenter/1.13.0": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "6.0.1",
@@ -1704,10 +1704,10 @@
           "lib/portable-net45+win8+wpa81+wp8/Microsoft.AppCenter.dll": {}
         }
       },
-      "Microsoft.AppCenter.Analytics/1.9.0": {
+      "Microsoft.AppCenter.Analytics/1.13.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "1.9.0"
+          "Microsoft.AppCenter": "1.13.0"
         },
         "compile": {
           "lib/portable-net45+win8+wpa81+wp8/Microsoft.AppCenter.Analytics.dll": {}
@@ -1716,10 +1716,10 @@
           "lib/portable-net45+win8+wpa81+wp8/Microsoft.AppCenter.Analytics.dll": {}
         }
       },
-      "Microsoft.AppCenter.Crashes/1.9.0": {
+      "Microsoft.AppCenter.Crashes/1.13.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "1.9.0"
+          "Microsoft.AppCenter": "1.13.0"
         },
         "compile": {
           "lib/portable-net45+win8+wpa81+wp8/Microsoft.AppCenter.Crashes.dll": {}
@@ -2424,7 +2424,7 @@
           "lib/net45/_._": {}
         }
       },
-      "Xamarin.UITest/2.2.6": {
+      "Xamarin.UITest/2.2.7": {
         "type": "package",
         "compile": {
           "lib/net45/Xamarin.UITest.dll": {}
@@ -2470,7 +2470,7 @@
           "lib/net45/ExcelDataReader.DataSet.dll": {}
         }
       },
-      "Microsoft.AppCenter/1.9.0": {
+      "Microsoft.AppCenter/1.13.0": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "6.0.1",
@@ -2483,10 +2483,10 @@
           "lib/portable-net45+win8+wpa81+wp8/Microsoft.AppCenter.dll": {}
         }
       },
-      "Microsoft.AppCenter.Analytics/1.9.0": {
+      "Microsoft.AppCenter.Analytics/1.13.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "1.9.0"
+          "Microsoft.AppCenter": "1.13.0"
         },
         "compile": {
           "lib/portable-net45+win8+wpa81+wp8/Microsoft.AppCenter.Analytics.dll": {}
@@ -2495,10 +2495,10 @@
           "lib/portable-net45+win8+wpa81+wp8/Microsoft.AppCenter.Analytics.dll": {}
         }
       },
-      "Microsoft.AppCenter.Crashes/1.9.0": {
+      "Microsoft.AppCenter.Crashes/1.13.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.AppCenter": "1.9.0"
+          "Microsoft.AppCenter": "1.13.0"
         },
         "compile": {
           "lib/portable-net45+win8+wpa81+wp8/Microsoft.AppCenter.Crashes.dll": {}
@@ -3203,7 +3203,7 @@
           "lib/net45/_._": {}
         }
       },
-      "Xamarin.UITest/2.2.6": {
+      "Xamarin.UITest/2.2.7": {
         "type": "package",
         "compile": {
           "lib/net45/Xamarin.UITest.dll": {}
@@ -3258,10 +3258,10 @@
         "lib/net45/ExcelDataReader.DataSet.dll"
       ]
     },
-    "Microsoft.AppCenter/1.9.0": {
-      "sha512": "FTegAq1AJANSUJD1ixKmxReD7ZrS/1HXMN0D910VDy0xvZ0WJt+ua/THJCUR56p7RzKZWWvgwp1QJCe3R1sJBA==",
+    "Microsoft.AppCenter/1.13.0": {
+      "sha512": "klt1cUPSa2ZI0elNTrFXiQo51mdh6DUpmiurZK68YdubpiPW3dJ3K/IFfykZPSfh1ALBuDar6DMpJJGa3Mn2wg==",
       "type": "package",
-      "path": "microsoft.appcenter/1.9.0",
+      "path": "microsoft.appcenter/1.13.0",
       "files": [
         ".signature.p7s",
         "lib/MonoAndroid403/Microsoft.AppCenter.Android.Bindings.dll",
@@ -3271,14 +3271,14 @@
         "lib/netstandard1.0/Microsoft.AppCenter.dll",
         "lib/portable-net45+win8+wpa81+wp8/Microsoft.AppCenter.dll",
         "lib/uap10.0/Microsoft.AppCenter.dll",
-        "microsoft.appcenter.1.9.0.nupkg.sha512",
+        "microsoft.appcenter.1.13.0.nupkg.sha512",
         "microsoft.appcenter.nuspec"
       ]
     },
-    "Microsoft.AppCenter.Analytics/1.9.0": {
-      "sha512": "/oQFw/dxxKyMsspEnrTnaXzJZC8uyLcZ4dz4r3Kis8QVNpLTTzKMCc5KHcgRnXbzQ19KdqFytAYPVtl452AcAg==",
+    "Microsoft.AppCenter.Analytics/1.13.0": {
+      "sha512": "XpvEnf0Vx2MgREOfjBXyFRdRARNTv44NuIV/IujEkAcibGJhQzMu03PChAVACKsBm8zvsMNxfHT51JSklS7Jrw==",
       "type": "package",
-      "path": "microsoft.appcenter.analytics/1.9.0",
+      "path": "microsoft.appcenter.analytics/1.13.0",
       "files": [
         ".signature.p7s",
         "lib/MonoAndroid403/Microsoft.AppCenter.Analytics.Android.Bindings.dll",
@@ -3288,14 +3288,14 @@
         "lib/netstandard1.0/Microsoft.AppCenter.Analytics.dll",
         "lib/portable-net45+win8+wpa81+wp8/Microsoft.AppCenter.Analytics.dll",
         "lib/uap10.0/Microsoft.AppCenter.Analytics.dll",
-        "microsoft.appcenter.analytics.1.9.0.nupkg.sha512",
+        "microsoft.appcenter.analytics.1.13.0.nupkg.sha512",
         "microsoft.appcenter.analytics.nuspec"
       ]
     },
-    "Microsoft.AppCenter.Crashes/1.9.0": {
-      "sha512": "eeKRueLrSZxnpsk6Xx22souNonZ22TrZEuhynRNjS2E+1TOiu5lOikZGFXTfctrXeA/4nKieOvNlSDpJ0JEBVA==",
+    "Microsoft.AppCenter.Crashes/1.13.0": {
+      "sha512": "JhQpYJnBNeLcOmIsVruGirtVgFfAwBQ3maiUxs5GXHoU7lWcdOt4vA480THinHwjeO8nO6CP//4RB7OUQ3ieCA==",
       "type": "package",
-      "path": "microsoft.appcenter.crashes/1.9.0",
+      "path": "microsoft.appcenter.crashes/1.13.0",
       "files": [
         ".signature.p7s",
         "build/uap10.0/Microsoft.AppCenter.Crashes.targets",
@@ -3305,7 +3305,7 @@
         "lib/Xamarin.iOS10/Microsoft.AppCenter.Crashes.iOS.Bindings.dll",
         "lib/netstandard1.0/Microsoft.AppCenter.Crashes.dll",
         "lib/portable-net45+win8+wpa81+wp8/Microsoft.AppCenter.Crashes.dll",
-        "microsoft.appcenter.crashes.1.9.0.nupkg.sha512",
+        "microsoft.appcenter.crashes.1.13.0.nupkg.sha512",
         "microsoft.appcenter.crashes.nuspec",
         "ref/uap10.0/Microsoft.AppCenter.Crashes.dll",
         "runtimes/win10-arm/lib/uap10.0/Microsoft.AppCenter.Crashes.dll",
@@ -6126,10 +6126,10 @@
         "system.xml.xdocument.nuspec"
       ]
     },
-    "Xamarin.UITest/2.2.6": {
-      "sha512": "Ix0ZrVVHUM55PM6SYQQJRYv3INYB1eO/Nvxaf2CWnM5ebLwpwLNgT3h4SePWOcQ8IpWZvrBy1eIatEarpiYGjA==",
+    "Xamarin.UITest/2.2.7": {
+      "sha512": "qlSeDT8ajDMfozooceuIGpnkIO1e/8jMfIX1NmBqnWh5d1fOkMafpeq9HYVxPO6f3VntDlx5/Zar9TBFqeF1lQ==",
       "type": "package",
-      "path": "xamarin.uitest/2.2.6",
+      "path": "xamarin.uitest/2.2.7",
       "files": [
         ".signature.p7s",
         "ThirdPartyNotices.txt",
@@ -6140,7 +6140,7 @@
         "lib/portable-net45+win8+wp8/Xamarin.UITest.xml",
         "lib/tools/test-cloud.exe",
         "tools/test-cloud.exe",
-        "xamarin.uitest.2.2.6.nupkg.sha512",
+        "xamarin.uitest.2.2.7.nupkg.sha512",
         "xamarin.uitest.nuspec"
       ]
     }
@@ -6150,12 +6150,12 @@
       "Dapper >= 1.50.2",
       "ExcelDataReader >= 3.0.0",
       "ExcelDataReader.DataSet >= 3.0.0",
-      "Microsoft.AppCenter.Analytics >= 1.9.0",
-      "Microsoft.AppCenter.Crashes >= 1.9.0",
+      "Microsoft.AppCenter.Analytics >= 1.13.0",
+      "Microsoft.AppCenter.Crashes >= 1.13.0",
       "NUnit >= 2.6.4",
       "NUnitTestAdapter >= 2.0.0",
       "Selenium.WebDriver >= 3.141.0",
-      "Xamarin.UITest >= 2.2.6"
+      "Xamarin.UITest >= 2.2.7"
     ]
   },
   "packageFolders": {
@@ -6205,11 +6205,11 @@
           },
           "Microsoft.AppCenter.Analytics": {
             "target": "Package",
-            "version": "[1.9.0, )"
+            "version": "[1.13.0, )"
           },
           "Microsoft.AppCenter.Crashes": {
             "target": "Package",
-            "version": "[1.9.0, )"
+            "version": "[1.13.0, )"
           },
           "NUnit": {
             "target": "Package",
@@ -6225,7 +6225,7 @@
           },
           "Xamarin.UITest": {
             "target": "Package",
-            "version": "[2.2.6, )"
+            "version": "[2.2.7, )"
           }
         }
       }

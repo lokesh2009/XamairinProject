@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Xamarin.UITest</id>
+    <version>2.2.7</version>
+    <title>Xamarin.UITest</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>https://docs.microsoft.com/appcenter/test-cloud/uitest/license</licenseUrl>
+    <projectUrl>https://docs.microsoft.com/appcenter/test-cloud/uitest/</projectUrl>
+    <iconUrl>https://s3-eu-west-1.amazonaws.com/xtc-uitest/logos/UITest_64x64.png</iconUrl>
+    <description>UI Automation Framework for testing Android and iOS apps.</description>
+    <releaseNotes>id: 3c16f419-54d2-4226-aec1-4cb6ebfa9177
+title: Xamarin.UITest 2.2.7 Release 1
+
+## Improvements
+
+* [iOS] DeviceAgent 1.3.2:
+  - Added new Korean alert for location from iOS 12
+  - Improve performance of element JSON serialization and simplify visibility heuristic
+
+* [iOS] iOSDeviceManager 3.2.2:
+  - FB Frameworks: handle missing simulator arches
+
+* [iOS] Xcode 10.1 integration: Fixed default simulator selection
+* [iOS] Fixed failures when device agent is starting</releaseNotes>
+    <copyright>© Microsoft Corporation. All rights reserved.</copyright>
+  </metadata>
+</package>
