@@ -26,6 +26,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Threading.Tasks.Dataflow, Version=4.5.24.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq" />
@@ -63,12 +64,15 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <None Include="app-debug.apk" />
-    <None Include="app-release.apk" />
+    <None Include="app-release .apk" />
     <None Include="TestData\Sanity_TestingScenario.xlsx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Base\Basepage.cs" />
     <Compile Include="Base\BaseStep.cs" />
+    <Compile Include="Configuration\Westbend_ElementCollection.cs" />
+    <Compile Include="Configuration\Westbend_Framework_Element.cs" />
+    <Compile Include="Configuration\Westbend_TestConfiguration.cs" />
     <Compile Include="Extension\WestBendExtensionMethods.cs" />
     <Compile Include="Pages\CreateAccountPage.cs" />
     <Compile Include="Pages\LandingPage.cs" />
@@ -84,9 +88,7 @@
     <Compile Include="Utility\ExcelU.cs" />
     <Compile Include="Utility\ExcelUtil.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Configuration\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <COMReference Include="Microsoft.Office.Core">
       <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>

@@ -17,14 +17,14 @@ namespace CrossplatformApp.Pages
     {
         
         public Query CreateAccount = x => x.Text("Create Account");
-        public Query FirstName = x => x.Id("NoResourceEntry-58");
-        public Query LastName = x => x.Id("NoResourceEntry-59");
-        public Query Emailid = x => x.Id("NoResourceEntry-60");
+        public Query FirstName = x => x.Marked("INPUT_FIRST_NAME");
+        public Query LastName = x => x.Marked("INPUT_LAST_NAME");
+        public Query Emailid = x => x.Marked("INPUT_EMAIL");
         public Query PhoneNo = x => x.Id("NoResourceEntry-62");
         
-        public Query Next => x => x.Property("contentDescription").Contains("NEXT_BUTTON");
+        public Query Next => x => x.Marked("NEXT_BUTTON");
         
-
+        //=================SnackBar Error Messages====================
         public Query SnakbarOk => x => x.Id("snackbar_action");
         public Query UsernotprovideanydataandclickonNext => x =>x.Text("All fields in this form are required");
         public Query Snakbar_PasswordNotmatched => x =>x.Text("Confirm Password does not match Password");
@@ -35,7 +35,7 @@ namespace CrossplatformApp.Pages
         public Query Password => x => x.Id("NoResourceEntry-102");
         public Query ConfirmPassword => x => x.Id("NoResourceEntry-108");
         public Query IagreeCheckbox => x => x.Id("NoResourceEntry-132");
-        public Query CreateAccButton => x => x.Id("NoResourceEntry-147");
+        public Query CreateAccButton => x => x.Text("Create Account");
 
 
         //*************************Click on Create Account link***********************
@@ -133,7 +133,7 @@ namespace CrossplatformApp.Pages
             internal void Registrationwithoutdata()
         { 
         
-              Thread.Sleep(10*1000);
+              Thread.Sleep(10*1500);
               ApplicationContext.Tap(Next);
 
         }
@@ -142,11 +142,11 @@ namespace CrossplatformApp.Pages
             internal void RegistrationFpage(string Fname, string Lname,string Email, string contact )
             { 
            
-            Thread.Sleep(10*1000);
+            Thread.Sleep(10*1500);
             ApplicationContext.Tap(FirstName);
             WestBendExtensionMethods.TapandEnterText(FirstName,Fname);
             
-            Thread.Sleep(10*1000);
+            Thread.Sleep(10*1500);
             ApplicationContext.Tap(LastName);
             WestBendExtensionMethods.TapandEnterText(LastName,Lname);
             
@@ -159,6 +159,8 @@ namespace CrossplatformApp.Pages
             // String contact need to convert in Double
             WestBendExtensionMethods.TapandEnterText(PhoneNo,contact);
            
+            
+            Thread.Sleep(10*1500);
             ApplicationContext.Tap(Next);
            //ApplicationContext.Tap(Next);
 
@@ -195,7 +197,7 @@ namespace CrossplatformApp.Pages
         public void ClickonCreateAccountButton()
             {
             Thread.Sleep(10*1000);
-          ApplicationContext.Tap(CreateAccButton);
+            ApplicationContext.Tap(CreateAccButton);
 
            }
         internal void ClickOn_Alert_OK()
@@ -203,6 +205,14 @@ namespace CrossplatformApp.Pages
             Thread.Sleep(10*1000);
             ApplicationContext.Tap(SnakbarOk);
 
+            }
+
+
+        internal void Wait4Element(Query elementwait)
+            { 
+            
+            ApplicationContext.WaitForElement(elementwait,"Please wait for snackbar to upload",new TimeSpan(0,0,0,250,0));
+            
             }
     }
 }

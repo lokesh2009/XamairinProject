@@ -31,7 +31,7 @@ namespace CrossplatformApp.Pages
         public Query SnakbarOk => x => x.Id("snackbar_action");
         public Query InvalidUseridandPwdMessage => x =>x.Text("Invalid email or password, please check your information and try again.");
         public  Query Snackbar_InvalidUsercredentialsErrorMessage =>x =>x.Text("Invalid email or password, please check your information and try again.");
-        
+        public Query All_PolicyHeader=> x=>x.Text("All Policies");
 
         //*****************Alert is getting depriciated******************
          public Query ErrorMessage_InvalidUsername_Password => x => x.Text("Username and password can't be blank");
@@ -97,10 +97,10 @@ namespace CrossplatformApp.Pages
 
             }
 
-        internal void Waitingelement()
+        internal void Waitingelement(Query waitelem)
             { 
-            ApplicationContext.WaitForElement(InvalidUseridandPwdMessage);
-
+              ApplicationContext.WaitForElement(waitelem,"Please wait for element to load",new TimeSpan(0,0,0,250,0));
+           
             
             }
     }

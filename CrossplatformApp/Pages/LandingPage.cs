@@ -21,7 +21,7 @@ namespace CrossplatformApp.Pages
        // public Query SignINwithEmailidLink= x =>x.Text("Sign in with email");
         public Query PayBillLink = x=>x.Text("Pay Bill");
 
-        public Query LearnMoreLink=x=>x.Property("contentDescription").Contains("LEARN_MORE_BUTTON");
+        public Query LearnMoreLink=x=>x.Marked("LEARN_MORE_BUTTON");
        
         // Skip Sign In Link is depriciated and now no use of that link
          

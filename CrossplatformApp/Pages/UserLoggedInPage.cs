@@ -43,10 +43,14 @@ namespace CrossplatformApp.Pages
 
 
         public Query FirstElementClick =>x=>x.Text("Policy Type");
-        
+        public Query ErrorRetrievingPolicy=x=>x.Text("Error retrieving the policy details, services might be down. The remote server returned an error: (503) Server Unavailable. (1)");
+        public Query TaponOK =>x=>x.Text("OK");
         public Query NoPolicySelected => x=>x.Text("No Policy has been selected");
         //***************************************************************************
-
+        internal void TaponMessageOk()
+            { 
+            ApplicationContext.Tap(TaponOK);
+            }
            
       internal void TapOnFirstPolicy(Query ElementOnTap)
             { 
@@ -75,6 +79,12 @@ namespace CrossplatformApp.Pages
             
             }
        
+        
+        internal void Waitingelement_UserLogged(Query waitelem)
+            { 
+             ApplicationContext.WaitForElement(waitelem,"Please wait for snackbar to upload",new TimeSpan(0,0,0,250,0));
+           
+            }
         
 }
 
