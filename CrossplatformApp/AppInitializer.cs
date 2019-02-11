@@ -17,8 +17,8 @@ namespace CrossplatformApp
             
 
 			return ConfigureApp
-                .iOS.InstalledApp("Provide the Installed App IPA file")
-                .StartApp();
+                .iOS.InstalledApp("./InsuredReactNativeApp.ipa").StartApp()
+                              ;
 		}
 	}
 }
