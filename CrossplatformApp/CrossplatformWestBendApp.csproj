@@ -64,7 +64,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </EmbeddedResource>
     <None Include="app-debug.apk" />
-    <None Include="app-release .apk" />
+    <None Include="app-release.apk" />
     <None Include="TestData\Sanity_TestingScenario.xlsx" />
   </ItemGroup>
   <ItemGroup>

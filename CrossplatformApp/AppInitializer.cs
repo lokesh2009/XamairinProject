@@ -11,11 +11,13 @@ namespace CrossplatformApp
           
 			if (platform == Platform.Android)
 			{
+               
 				return ConfigureApp.Android.ApkFile("./app-release.apk").StartApp();
 			}
+            
 
 			return ConfigureApp
-                .iOS
+                .iOS.InstalledApp("Provide the Installed App IPA file")
                 .StartApp();
 		}
 	}

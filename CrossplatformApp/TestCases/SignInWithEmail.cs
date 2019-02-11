@@ -15,7 +15,7 @@ using Xamarin.UITest.Utils ;
 namespace CrossplatformApp
 {
     [TestFixture(Platform.Android)]
-//	[TestFixture(Platform.iOS)]
+	[TestFixture(Platform.iOS)]
 
 	public class SignInWithEmail:Basepage
 	{
@@ -49,9 +49,8 @@ namespace CrossplatformApp
             ExcelUtil.PopulateInCollection("./TestDataWestband.xlsx","LoginData");          
             Currentpage.As<SignInEmail>().SignIn(ExcelUtil.ReadData(3,"Userid"),ExcelUtil.ReadData(3,"Password"));
             Currentpage = new UserLoggedInPage ();
-            ApplicationContext.WaitForElement(Currentpage.As<UserLoggedInPage>().Snakbar_Successfullmessage); 
-            Thread.Sleep(6000);
-            ApplicationContext.WaitForElement(Currentpage.As<UserLoggedInPage>().AllPolicy);
+            Currentpage.As<UserLoggedInPage>().Waitingelement_UserLogged(Currentpage.As<UserLoggedInPage>().Snakbar_Successfullmessage);
+            Currentpage.As<UserLoggedInPage>().Waitingelement_UserLogged(Currentpage.As<UserLoggedInPage>().AllPolicyDisplayScreen);
             Currentpage.As<UserLoggedInPage>().ClickMenuBarTap();
             Currentpage.As<UserLoggedInPage>().ClickOnAnyLink(UserLoggedInPage.MenuBar_AccountSetting);
            // AppResult[] results = app.Query(x=>x.All());
@@ -397,15 +396,12 @@ namespace CrossplatformApp
            
            
             }
-        /*
+        
         [Test]
         public void WIP()
             { 
           app.Repl();
-           
-         
-           
             
-            }*/
+            }
         }
 }

@@ -16,7 +16,7 @@ namespace CrossplatformApp.Pages
     class UserLoggedInPage : Basepage
     {
         
-        public Query AllPolicyDisplayScreen = x=>x.Text("All Policies");
+        public Query AllPolicyDisplayScreen = x=>x.Text("Select a policy");
       //  private readonly double timeoutInSeconds;
 
         public Query Snakbar_Successfullmessage => x => x.Text("Authentication Successful.");

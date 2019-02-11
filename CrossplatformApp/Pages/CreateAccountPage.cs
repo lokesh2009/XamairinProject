@@ -36,7 +36,9 @@ namespace CrossplatformApp.Pages
         public Query ConfirmPassword => x => x.Id("NoResourceEntry-108");
         public Query IagreeCheckbox => x => x.Id("NoResourceEntry-132");
         public Query CreateAccButton => x => x.Text("Create Account");
+        public Query ClickCreateButton => x=> x.Marked("LEARN_MORE_BUTTON");
 
+        public Query BackButton => x => x.Class("android.widget.TextView");
 
         //*************************Click on Create Account link***********************
         /*
@@ -197,8 +199,8 @@ namespace CrossplatformApp.Pages
         public void ClickonCreateAccountButton()
             {
             Thread.Sleep(10*1000);
-            ApplicationContext.Tap(CreateAccButton);
-
+           // ApplicationContext.Tap(CreateAccButton);
+           ApplicationContext.Tap(ClickCreateButton);
            }
         internal void ClickOn_Alert_OK()
             { 
@@ -211,7 +213,7 @@ namespace CrossplatformApp.Pages
         internal void Wait4Element(Query elementwait)
             { 
             
-            ApplicationContext.WaitForElement(elementwait,"Please wait for snackbar to upload",new TimeSpan(0,0,0,250,0));
+            ApplicationContext.WaitForElement(elementwait,"Please wait for snackbar to upload",new TimeSpan(0,0,0,350,0));
             
             }
     }
