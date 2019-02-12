@@ -15,7 +15,7 @@ using Xamarin.UITest.Utils ;
 namespace CrossplatformApp
 {
     [TestFixture(Platform.Android)]
-	[TestFixture(Platform.iOS)]
+//	[TestFixture(Platform.iOS)]
 
 	public class SignInWithEmail:Basepage
 	{
@@ -364,7 +364,7 @@ namespace CrossplatformApp
             Currentpage.As<UserLoggedInPage>().TapOnFirstPolicy(Currentpage.As<UserLoggedInPage>().FirstElementClick);
            
             Currentpage.As<UserLoggedInPage>().Waitingelement_UserLogged(Currentpage.As<UserLoggedInPage>().ErrorRetrievingPolicy);
-            Assert.AreEqual("Error retrieving the policy details, services might be down. The remote server returned an error: (503) Server Unavailable. (1)",ApplicationContext.Query(Currentpage.As<UserLoggedInPage>().ErrorRetrievingPolicy).First().Text);
+            Assert.AreEqual("Error retrieving the billing summary",ApplicationContext.Query(Currentpage.As<UserLoggedInPage>().ErrorRetrievingPolicy).First().Text);
            
             Currentpage.As<UserLoggedInPage>().Waitingelement_UserLogged(Currentpage.As<UserLoggedInPage>().TaponOK);
             Currentpage.As<UserLoggedInPage>().TaponMessageOk();
@@ -396,12 +396,14 @@ namespace CrossplatformApp
            
            
             }
-        
+      /*  
         [Test]
-        public void WIP()
+       public void WIP()
             { 
-          app.Repl();
+
+               app.Repl();
             
             }
+            */
         }
 }

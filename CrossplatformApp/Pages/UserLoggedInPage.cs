@@ -43,7 +43,9 @@ namespace CrossplatformApp.Pages
 
 
         public Query FirstElementClick =>x=>x.Text("Policy Type");
-        public Query ErrorRetrievingPolicy=x=>x.Text("Error retrieving the policy details, services might be down. The remote server returned an error: (503) Server Unavailable. (1)");
+        public Query ErrorRetrievingPolicy=x=>x.Text("Error retrieving the billing summary)");
+      
+        //  public Query ErrorRetrievingPolicy=x=>x.Text("Error retrieving the policy details, services might be down. The remote server returned an error: (503) Server Unavailable. (1)");
         public Query TaponOK =>x=>x.Text("OK");
         public Query NoPolicySelected => x=>x.Text("No Policy has been selected");
         //***************************************************************************

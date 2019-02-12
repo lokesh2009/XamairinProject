@@ -65,6 +65,7 @@
     </EmbeddedResource>
     <None Include="app-debug.apk" />
     <None Include="app-release.apk" />
+    <None Include="InsuredReactNativeApp.ipa" />
     <None Include="TestData\Sanity_TestingScenario.xlsx" />
   </ItemGroup>
   <ItemGroup>
@@ -75,6 +76,7 @@
     <Compile Include="Configuration\Westbend_TestConfiguration.cs" />
     <Compile Include="Extension\WestBendExtensionMethods.cs" />
     <Compile Include="Pages\CreateAccountPage.cs" />
+    <Compile Include="Pages\ForgotPassword.cs" />
     <Compile Include="Pages\LandingPage.cs" />
     <Compile Include="Pages\LearnMorePage.cs" />
     <Compile Include="Pages\Paybill.cs" />

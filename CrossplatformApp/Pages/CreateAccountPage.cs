@@ -34,12 +34,12 @@ namespace CrossplatformApp.Pages
 
         public Query Password => x => x.Id("NoResourceEntry-102");
         public Query ConfirmPassword => x => x.Id("NoResourceEntry-108");
-        public Query IagreeCheckbox => x => x.Id("NoResourceEntry-132");
+        public Query IagreeCheckbox => x => x.Marked("CHECK_BOX_BUTTON");
         public Query CreateAccButton => x => x.Text("Create Account");
         public Query ClickCreateButton => x=> x.Marked("LEARN_MORE_BUTTON");
-
+        public Query TermsPage => x=>x.Marked("TERMS_OF_USE_BUTTON");
         public Query BackButton => x => x.Class("android.widget.TextView");
-
+        public Query GoBack => x=>x.Marked("GO_BACK_BUTTON");
         //*************************Click on Create Account link***********************
         /*
             internal void ClickonCreateAccountLink()
@@ -199,8 +199,8 @@ namespace CrossplatformApp.Pages
         public void ClickonCreateAccountButton()
             {
             Thread.Sleep(10*1000);
-           // ApplicationContext.Tap(CreateAccButton);
-           ApplicationContext.Tap(ClickCreateButton);
+            //ApplicationContext.Tap(CreateAccButton);
+            ApplicationContext.Tap(ClickCreateButton);
            }
         internal void ClickOn_Alert_OK()
             { 

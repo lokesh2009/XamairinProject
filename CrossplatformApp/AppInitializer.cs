@@ -13,9 +13,8 @@ namespace CrossplatformApp
 			{
                
 				return ConfigureApp.Android.ApkFile("./app-release.apk").StartApp();
-			}
-            
-
+			} 
+        
 			return ConfigureApp
                 .iOS.InstalledApp("./InsuredReactNativeApp.ipa").StartApp()
                               ;

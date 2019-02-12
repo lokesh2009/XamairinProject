@@ -19,7 +19,7 @@ namespace CrossplatformApp.Pages
        // public Query SignINwithEmailidLink = x=>x.Property("contentDescription").Contains("SIGN_IN_BUTTON");
         public Query CreateAccountlink = x => x.Text("Create Account");
        // public Query SignINwithEmailidLink= x =>x.Text("Sign in with email");
-        public Query PayBillLink = x=>x.Text("Pay Bill");
+        public Query PayBillLink = x=>x.Marked("PAY_BILL_BUTTON");
 
         public Query LearnMoreLink=x=>x.Marked("LEARN_MORE_BUTTON");
        

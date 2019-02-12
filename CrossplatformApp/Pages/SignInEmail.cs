@@ -20,10 +20,10 @@ namespace CrossplatformApp.Pages
               
       //  public Query ClickonSignIn => x => x.Property("contentDescription").Contains("ButtonText");
 
-        public Query ClickonSignIn => x => x.Text("Sign in with email");
-        public Query EnterEmailid => x => x.Id("NoResourceEntry-57");
-        public Query Enterpassword => x => x.Id("NoResourceEntry-62");
-        public Query SignInButton => x => x.Text("SIGN IN");
+        public Query ClickonSignIn => x => x.Marked("SIGN_IN_BUTTON");
+        public Query EnterEmailid => x => x.Marked("USER_EMAIL");
+        public Query Enterpassword => x => x.Marked("INPUT_PASSWORD");
+        public Query SignInButton => x => x.Marked("SIGN_IN_BUTTON");
 
         public Query Rememberme => x => x.Text("Remember Me");
         public Query ForgotPassword => x=> x.Text("Forgot password?");
@@ -37,6 +37,8 @@ namespace CrossplatformApp.Pages
          public Query ErrorMessage_InvalidUsername_Password => x => x.Text("Username and password can't be blank");
          public Query ClickOK_Alert => x=> x.Text("OK");
 
+        //==============Hide Icon===============
+        public Query hideicon => x=>x.Marked("EYE_HIDE_SHOW_BUTTON");
 
 
         //After Login Internal Pages 
