@@ -396,7 +396,7 @@ namespace CrossplatformApp
            
            
             }
-      /*  
+       
         [Test]
        public void WIP()
             { 
@@ -404,6 +404,6 @@ namespace CrossplatformApp
                app.Repl();
             
             }
-            */
+            
         }
 }

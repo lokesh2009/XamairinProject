@@ -32,7 +32,7 @@ namespace CrossplatformApp.Pages
         public Query Snakbar_UseremailAlreadyExist = x=>x.Text("An account already exists with this email address. Please login (101)");
         // Create Account second page locaters
 
-        public Query Password => x => x.Id("NoResourceEntry-102");
+        public Query Password => x => x.Marked("INPUT_PASSWORD");
         public Query ConfirmPassword => x => x.Id("NoResourceEntry-108");
         public Query IagreeCheckbox => x => x.Marked("CHECK_BOX_BUTTON");
         public Query CreateAccButton => x => x.Text("Create Account");

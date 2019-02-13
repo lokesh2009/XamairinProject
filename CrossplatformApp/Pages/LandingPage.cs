@@ -15,9 +15,9 @@ namespace CrossplatformApp.Pages
     class LandingPage : Basepage
     {
        
-       public Query SignINwithEmailidLink = x=>x.Marked("SIGN_IN_BUTTON");
+       public Query SignINwithEmailidLink = x=>x.Marked("SIGN_IN_WITH_EMAIL_BUTTON");
        // public Query SignINwithEmailidLink = x=>x.Property("contentDescription").Contains("SIGN_IN_BUTTON");
-        public Query CreateAccountlink = x => x.Text("Create Account");
+        public Query CreateAccountlink = x => x.Text("CREATE_ACCOUNT_LINK_BUTTON");
        // public Query SignINwithEmailidLink= x =>x.Text("Sign in with email");
         public Query PayBillLink = x=>x.Marked("PAY_BILL_BUTTON");
 
