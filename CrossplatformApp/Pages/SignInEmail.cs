@@ -20,7 +20,7 @@ namespace CrossplatformApp.Pages
               
       //  public Query ClickonSignIn => x => x.Property("contentDescription").Contains("ButtonText");
 
-        public Query ClickonSignIn => x => x.Marked("SIGN_IN_BUTTON");
+        public Query ClickonSignIn => x => x.Marked("SIGN_IN_WITH_EMAIL_BUTTON");
         public Query EnterEmailid => x => x.Marked("USER_EMAIL");
         public Query Enterpassword => x => x.Marked("INPUT_PASSWORD");
         public Query SignInButton => x => x.Marked("SIGN_IN_BUTTON");
@@ -75,11 +75,13 @@ namespace CrossplatformApp.Pages
            
             ApplicationContext.DismissKeyboard();
             Thread.Sleep(10*1000);
+ 
+            
             ApplicationContext.Tap(SignInButton);
             
             //ApplicationContext.Tap(SignInButton);
  
- 
+
             }
 
         // Sign in Without passing any value
@@ -101,7 +103,7 @@ namespace CrossplatformApp.Pages
 
         internal void Waitingelement(Query waitelem)
             { 
-              ApplicationContext.WaitForElement(waitelem,"Please wait for element to load",new TimeSpan(0,0,0,250,0));
+              ApplicationContext.WaitForElement(waitelem,"Please wait for element to load",new TimeSpan(0,0,0,1350,0));
            
             
             }

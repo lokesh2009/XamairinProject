@@ -20,6 +20,7 @@ namespace CrossplatformApp.Pages
       //  private readonly double timeoutInSeconds;
 
         public Query Snakbar_Successfullmessage => x => x.Text("Authentication Successful.");
+       // public Query SnackbarokAction=> x=>x.Id("snackbar_action");
         public Query EnterEmailid => x => x.Id("NoResourceEntry-57");
     //  public Query (c => c.WebView().InvokeJs("document.getElementById('test-1').style.backgroundColor"))
         public Query MenuBar => x=>x.Class("android.widget.ImageView");
@@ -43,11 +44,14 @@ namespace CrossplatformApp.Pages
 
 
         public Query FirstElementClick =>x=>x.Text("Policy Type");
-        public Query ErrorRetrievingPolicy=x=>x.Text("Error retrieving the billing summary)");
+        public Query ErrorRetrievingPolicy=x=>x.Text("Error retrieving the billing summary");
       
         //  public Query ErrorRetrievingPolicy=x=>x.Text("Error retrieving the policy details, services might be down. The remote server returned an error: (503) Server Unavailable. (1)");
-        public Query TaponOK =>x=>x.Text("OK");
+        public Query TaponOK =>x=>x.Text("Ok");
         public Query NoPolicySelected => x=>x.Text("No Policy has been selected");
+        public Query View_ID_Card => x=>x.Text("View ID Card");
+
+
         //***************************************************************************
         internal void TaponMessageOk()
             { 
@@ -84,7 +88,7 @@ namespace CrossplatformApp.Pages
         
         internal void Waitingelement_UserLogged(Query waitelem)
             { 
-             ApplicationContext.WaitForElement(waitelem,"Please wait for snackbar to upload",new TimeSpan(0,0,0,250,0));
+             ApplicationContext.WaitForElement(waitelem,"Please wait for snackbar to upload",new TimeSpan(0,0,0,1350,0));
            
             }
         

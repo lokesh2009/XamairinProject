@@ -213,7 +213,7 @@ namespace CrossplatformApp.Pages
         internal void Wait4Element(Query elementwait)
             { 
             
-            ApplicationContext.WaitForElement(elementwait,"Please wait for snackbar to upload",new TimeSpan(0,0,0,350,0));
+            ApplicationContext.WaitForElement(elementwait,"Please wait for snackbar to upload",new TimeSpan(0,0,0,3500,0));
             
             }
     }
